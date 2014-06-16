@@ -1,0 +1,274 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+		<head>
+<script type="text/javascript" src="js/navmenu.js"><!--
+
+//--></script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="wasHost" content="01">
+<title>OneAmerica Online Services</title>
+<script type="text/javascript">
+		var oaResourcePath = "/oacommon/public/";
+		var oaBlankImage = "/oacommon/public/images/pngbehavior/blank.gif";
+		</script>
+<link href="css/enterprise.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/onlineservices.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/onlineservices_print.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://www.ols.oneamerica.com/oacommon/public/images/identity/OneAmericaFavorites.ico" rel="shortcut icon" type="image/x-icon">
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/oa-util.js"></script>
+
+<!--[if lt IE 8]>
+		<link href="/oacommon/public/styles/ie7.css"
+			  rel="stylesheet" type="text/css" media="all"/>
+		<![endif]-->
+
+<!--[if lt IE 7]> 
+		<link href="/oacommon/public/styles/ie.css" 
+			  rel="stylesheet" type="text/css" media="all"/>
+		
+		<style type="text/css" media="screen">
+		img {behavior:	url("/oacommon/public/scripts/pngbehavior.htc");}
+		</style>
+		
+		<script type="text/javascript" 
+			    src="js/helper.js"></script>			    
+		<![endif]-->
+
+<meta name="DCS.dcsuri" content="/home.jsp">
+<meta name="WT.sv" content="prod01">
+		</head>
+
+		<body class="app home">
+<div id="banner">
+			<div id="globalnav">
+		<div id="search">
+					<form target="" id="globalSearchForm" name="globalSearchForm" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+				<input id="globalSearchForm:_idJsp1" name="globalSearchForm:_idJsp1" value="Enter keyword(s)" onfocus="if (this.value == 'Enter keyword(s)') {this.value = '';}" type="text">
+				<script><!--
+document.forms['globalSearchForm'].onkeypress=function (event) {return submitOnEnter(event, 'globalSearchForm:search');}
+//--></script>
+				<input id="globalSearchForm:search" name="globalSearchForm:search" value="Search" onclick="clear_globalSearchForm();" class="b-promo b-arrow-red" type="submit">
+				<input name="globalSearchForm_SUBMIT" value="1" type="hidden">
+				<input name="jsf_sequence" value="35" type="hidden">
+				<input value="" name="globalSearchForm:_link_hidden_" type="hidden">
+				<script type="text/javascript"><!--
+function clear_globalSearchForm() {
+  var f = document.forms['globalSearchForm'];
+  f.elements['globalSearchForm:_link_hidden_'].value='';
+  f.target='';
+}
+clear_globalSearchForm();
+//--></script>
+			</form>
+				</div>
+		<form id="globalNavMenuForm" name="globalNavMenuForm" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+					<input name="globalNavMenuForm:globalNavMenuInput" type="hidden">
+					<ul id="globalNavMenu">
+				<li class="first"><a href="#" onclick="oa_navigate('globalNavMenuForm','globalNavMenuForm:globalNavMenuInput','contactList',false);return false;">Contact List</a></li>
+				<li class=""><a href="#" onclick="oa_navigate('globalNavMenuForm','globalNavMenuForm:globalNavMenuInput','updtAcctInfo',false);return false;">Update Account Info</a></li>
+				<li class=""><a href="#" onclick="oa_navigate('globalNavMenuForm','globalNavMenuForm:globalNavMenuInput','logoutlink',false);return false;">Logout</a></li>
+			</ul>
+					<input name="globalNavMenuForm_SUBMIT" value="1" type="hidden">
+					<input name="jsf_sequence" value="35" type="hidden">
+				</form>
+	</div>
+			<div id="identity"><a id="_idJsp3" name="_idJsp3" href="#" target="_blank" class="logo"><img src="images/logoOA.png" alt="OneAmerica" title="OneAmerica" style="border: 0" class="screen" height="50" width="119"><img src="images/logoOA.png" alt="OneAmerica" title="OneAmerica" style="border: 0" class="print" height="50" width="119"></a><img src="images/online_services.gif" alt="Online Services" class="screen" height="27" width="168"><img src="images/online_services_print.gif" alt="Online Services" class="print" height="38" width="180"></div>
+			<div id="primarynav">
+		<form id="primaryNavMenuForm" name="primaryNavMenuForm" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+					<input name="primaryNavMenuForm:primaryNavMenuInput" type="hidden">
+					<ul id="primaryNavMenu">
+				<li class="first disabled submenu"><a href="#">Home</a></li>
+				<li class="disabled submenu"><a href="#">Sales Connection (eApp)</a>
+							<ul>
+						<li class=""><a href="#">Run Sales Connection</a></li>
+						<li class=""><a href="#">Practice Sales Connection</a></li>
+						<li class=""><a href="#">General Information</a></li>
+						<li class=""><a href="#">eApp Training</a></li>
+					</ul>
+						</li>
+				<li class="disabled submenu"><a href="#">My Business</a>
+							<ul>
+						<li class=""><a href="#">Pending</a></li>
+						<li class=""><a href="#">Online Submission</a></li>
+						<li class=""><a href="#">AppLog</a></li>
+						<li class=""><a href="#">1035 Log</a></li>
+						<li class=""><a href="#">Inforce</a></li>
+						<li class=""><a href="#">Life Events</a></li>
+					</ul>
+						</li>
+				<li class="disabled submenu"><a href="#">Products</a>
+							<ul>
+						<li class=""><a href="#">Care Solutions</a></li>
+					</ul>
+						</li>
+				<li class="disabled submenu"><a href="#">Sales Support</a>
+							<ul>
+						<li class=""><a href="#">Appointment and Contracting</a></li>
+						<li class=""><a href="#">Advanced Sales</a></li>
+						<li class=""><a href="#">Advertising Review</a></li>
+						<li class=""><a href="#">Resources</a></li>
+					</ul>
+						</li>
+				<li class="disabled submenu"><a href="#">Market Conduct</a>
+							<ul>
+						<li class=""><a href="#">Anti-Money Laundering Program</a></li>
+						<li class=""><a href="#">Practice and Procedures Manual</a></li>
+						<li class=""><a href="#">Producer Guidelines</a></li>
+						<li class=""><a href="#">Corp Compliance Bulletins &amp; Updates</a></li>
+					</ul>
+						</li>
+				<li class="first disabled submenu"><a href="#">News</a>
+							<ul>
+						<li class=""><a href="#">NewsFlash Archive</a></li>
+						<li class=""><a href="#">Interest Rates &amp; Annuity Factors</a></li>
+					</ul>
+						</li>
+			</ul>
+					<input name="primaryNavMenuForm_SUBMIT" value="1" type="hidden">
+					<input name="jsf_sequence" value="35" type="hidden">
+				</form>
+	</div>
+		</div>
+<div id="wrapper">
+			<div id="container">
+		<div id="content">
+					<form id="dataList1" name="dataList1" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+				<input name="dataList1_SUBMIT" value="1" type="hidden">
+				<input name="jsf_sequence" value="35" type="hidden">
+			</form>
+					<h1>Welcome to State Life Online Services</h1>
+					<div class="four-col"> <img src="images/hAgent.jpg" alt=""/>
+				<p class="first">Welcome to the Care Solutions suite of asset-based long-term care insurance products offered by The State Life Insurance Company, a OneAmerica company. We are proud to offer this portfolio of solutions: Asset-Care<sup>&reg;</sup>, Annuity Care<sup>&reg;</sup>, Annuity Care<sup>&reg;</sup> II, ImmediateCare<sup>&reg;</sup> and Legacy Care<sup>&reg;</sup>, all designed to provide policyholders with quality coverage and value. These options have allowed producers to provide a &#8220;win-win&#8221; solution to thousands of insureds and their families for over 20 years.</p>
+				<p>To assist you, State Life has an outstanding staff of wholesalers who have many combined years of expertise. They are available to discuss sales ideas and strategies, provide product assistance, conduct CE or client seminars and offer market information.</p>
+				<p><strong>Contact us at 1-800-275-5101 to reach your state's sales team or for further information and assistance.</strong></p>
+				<p>Note: Please review the state availability list for products in your state. If the State Life Care Solutions portfolio is available in your state, be sure you have completed appointment forms to that you may begin selling right away. </p>
+				
+				<!-- Begin 4 column touts-->
+				<div class="clearfix">
+							<div class="one-col">
+						<div class="tout"> <img alt="" src="images/t-sales-connection.png">
+									<h3><a href="#">Sales Connection (eApp)</a></h3>
+									<p>Your one-stop resource for all of the tools needed to illustrate and submit.</p>
+								</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /one-col-->
+							<div class="one-col">
+						<div class="tout"> <img alt="" src="images/t-pending.png">
+									<h3><a href="#">Pending</a></h3>
+									<p>View your pending business.</p>
+								</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /one-col-->
+							<div class="one-col">
+						<div class="tout"> <img alt="" src="images/t-inforce-search.png">
+									<h3><a href="#">Inforce Search</a></h3>
+									<p>Search by client name, policy number, or SSN.</p>
+								</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /one-col-->
+							<div class="one-col last-col">
+						<div class="tout"> <img alt="" src="images/t-download.png">
+									<h3><a href="#">Illustration Software</a></h3>
+									<p>Install Care Solutions software on your desktop.</p>
+								</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /one-col--> 
+						</div>
+				<!--/clearfix--> 
+				<!-- End 4 column touts-->
+				
+				<div class="footer-faux clearfix">
+							<div class="one-col">
+						<h3>Quick Links</h3>
+						<ul>
+									<li><a href="#">Forms</a></li>
+									<li><a href="#">State Availability</a></li>
+									<li><a href="#">Downloads</a></li>
+									<li><a href="#">Sales Team Directory</a></li>
+									<li><a href="#">Interest Rates</a></li>
+									<li><a href="#">AssetBasedLTC.com</a></li>
+									<li><a href="#">OneAmerica Strength Center</a></li>
+								</ul>
+					</div>
+							<!-- /one-col-->
+							<div class="two-col last-col">
+						<h3>Contacts</h3>
+						<p> <strong>American United Life</strong><br>
+									<strong>Toll-Free:</strong> 1.800.275.5101 </p>
+					</div>
+							<!-- /one-col /last-col --> 
+						</div>
+				<!-- /clearfix--> 
+			</div>
+					<!-- /four-col--> 
+				</div>
+		<!-- /content-->
+		
+		<div id="sidenav">
+					<style type="text/css">
+		#sidenav dl dd a  {
+			font-size: .85em;
+			color: #0000EE;
+			text-decoration: underline;
+		}
+		#sidenav dl dd a:hover a:visited {
+			font-size: .85em;
+			color: #0000EE;
+			text-decoration: underline;
+		}
+	</style>
+					<form id="navMenuForm" name="navMenuForm" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+				<input name="navMenuForm:quicklinksMenuInput" type="hidden">
+				<ul id="quicklinksMenu">
+							<li class="disabled submenu">
+						<h2>Quick Links</h2>
+						<ul>
+									<li><a href="#">Forms</a></li>
+									<li><a href="#">State Availability</a></li>
+									<li><a href="#">Downloads</a></li>
+									<li><a href="#">Sales Team Directory</a></li>
+									<li><a href="#">Interest Rates</a></li>
+									<li><a href="#">AssetBasedLTC.com</a></li>
+									<li><a href="#">OneAmerica Strength Center</a></li>
+								</ul>
+					</li>
+						</ul>
+				<div>
+							<input name="navMenuForm:appSwitchMenuInput" type="hidden">
+							<ul id="appSwitchMenu">
+						<li class="disabled submenu">
+									<h2>OneAmerica<sup>&reg;</sup> Affiliates</h2>
+									<ul>
+								<li class=""><a href="OnlineServices_AUL.htm">AUL</a></li>
+								<li class="active"><a href="OnlineServices_StateLife.htm">State Life</a></li>
+								<li class=""><a href="OnlineServices_PML.htm">PML</a></li>
+								<li class=""><a href="OnlineServices_OAS.htm">OneAmerica Securities</a></li>
+							</ul>
+								</li>
+					</ul>
+						</div>
+				<input name="navMenuForm_SUBMIT" value="1" type="hidden">
+				<input name="jsf_sequence" value="35" type="hidden">
+			</form>
+					<div class="tout-plain"> <a href="https://www.ols.oneamerica.com/wps/wcm/connect/ind/OnlineServices/Home/OneSource+Email+Archive"><img src="images/OLSbuttonANC2video.jpg" alt="OneSource Email Archive" border="0"></a> </div>
+					<!--/tout-plain--> 
+					
+				</div>
+	</div>
+		</div>
+<div class="clear"></div>
+<div id="footer">
+			<div id="wordmark"> <img src="images/wordmark.gif" alt="The companies of OneAmerica Financial Partners, Inc." title="The companies of OneAmerica Financial Partners, Inc." class="screen" border="0" height="25" width="336"> <img src="images/wordmark_print_hr.gif" alt="The companies of OneAmerica Financial Partners, Inc." title="The companies of OneAmerica Financial Partners, Inc." class="print" border="0" height="25" width="336"> </div>
+			<div id="disclosures">
+		<p class="links"> <a href="http://www.oneamerica.com/wps/wcm/connect/oa/Enterprise+Docs/Legal+Disclaimers" target="_blank">Legal Disclaimers and Terms of Use</a> | <a href="http://www.oneamerica.com/wps/wcm/connect/oa/Enterprise+Docs/Privacy+Statement" target="_blank">Privacy Statement</a> | 
+					Copyright 2002 to 2014, OneAmerica®, all rights reserved.</p>
+	</div>
+			<div id="disclaimer"> For company and recruiting use only. Not for public distribution. </div>
+		</div>
+</body>
+</html>

@@ -1,0 +1,928 @@
+/* CSS Document lists_nav.css */
+/* 2008.01.31-01 */
+/* GLOBAL
+======================================== */
+#banner ul {
+	margin:0;
+	padding:0;
+	font-size: 80%;
+}
+#banner ul ul
+{
+	float:none;
+}
+#banner li {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	padding:0 6px;
+	margin: 6px;
+}
+
+/* GLOBAL NAVIGATION
+======================================== */
+#globalnav ul {
+	float: right;
+	line-height:1em;
+	margin-top: 8px;
+}
+#globalnav li {
+/*	position:relative; */
+	float: left;
+	border-left: 1px solid #FFF;
+}
+#globalnav li a {
+	display: block;
+	padding: 3px;
+	white-space: nowrap; /* force first level menu items to a single line */
+}
+#globalnav li.first {
+	/* get rid of left border on first primary menu */
+	border-left: none;
+}
+
+/* PRIMARY NAVIGATION AND DROP-DOWN MENUS
+======================================== */
+#primarynav ul {
+	/* first level of menus */
+	font-size: 90%;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap; /* force first level menu items to a single line */
+}
+#primarynav li {
+	position: relative;
+	float: left; /* stack in a horizontal line */
+	clear: right;
+	border-left: 1px solid #FFF;
+	background-color: #023D69;
+	white-space: nowrap; /* force first level menu items to a single line */	
+	z-index: 101;
+}
+#primarynav li.first {
+	/* get rid of left border on first primary menu */
+	border-left: none;
+}
+#primarynav li a {
+	display: block; /* make clickable area fill out */
+	text-decoration: none;
+	padding: 2px 10px;
+	background-color: transparent;
+}
+#primarynav ul ul {
+	/* A nested list styles our popup/fly-out menus. */
+	position: absolute;
+	border-left: 1px solid #999;
+	border-right: 1px solid #999;
+	/* if you change this width it must match a rule in ie.css */
+	width: 14em;
+	visibility: hidden;
+	font-size: 100%;
+	background-color: #F2E9D3;
+	z-index: 100;
+}
+#primarynav ul ul.left {
+	right: 0;
+	float: none;
+}
+#primarynav ul ul a {
+	/* In IE the links will get bigger than their container. */
+	width: 12em;
+}
+#primarynav ul ul li {
+	/* A nested list styles our popup/fly-out menus. */
+	border-bottom: 1px dotted #023D69;
+	padding-right: 12px;
+	/* override inherited attributes first level menus */
+	float: none;
+	border-left: none;
+	background-color: transparent;
+	white-space: normal;
+}
+#primarynav ul ul.left li {
+	padding-right: 0;
+	padding-left: 12px;
+}
+#primarynav ul ul li ul {
+	top: 0; 
+	left: 100%;
+}
+#primarynav ul ul.left li ul {
+	left: auto;
+	right: 100%;
+}
+#primarynav ul ul li a.disabled {
+	/* dark grey for disabled links */ 
+	color: #999;
+}
+#primarynav ul ul li a {
+	/* links on submenus (light background) */
+	color: #000;
+}
+#primarynav li li.submenu {
+	/* light tan */
+	background: #F2E9D3 url(../images/accents/caret_rt.gif) no-repeat 96% 5px;
+}
+#primarynav li ul.left li.submenu {
+	background: #F2E9D3 url(../images/accents/caret_lt.gif) no-repeat 4% 5px;
+}
+#primarynav li:hover, #primarynav li.submenu:hover, #primarynav ul.left li.submenu:hover  {
+	/* Hightlight current menu item & transversal path. */
+	background-color: #FFF;
+}
+#primarynav li:hover a {
+	/* When we hover on the primary nav menu link it will be red with white background. */
+	/* If we mouse into it's sub menu(s) we'd like to keep the background on the primary */
+	/* nav menu bar white, but the text would go back to white if we weren't hovering  */
+	/* over it. So this makes all link's text black while we're hovering anywhere in its */
+	/* menu or sub menus. */
+	color: black;
+}
+#primarynav li a:hover {
+	/* red */
+	color: #AF1732;
+}
+#primarynav ul li:hover ul {
+	/* Display the secondary menu when we hover on a primary menu item. */
+	visibility: visible;
+}
+#primarynav ul li:hover ul ul {
+	/* The previous rule cascades and shows all sub menu's. So we */
+	/* need a more specific rule to turn back off tertiary menus. */
+	visibility: hidden;
+}
+#primarynav ul ul li:hover ul {
+	/* Display the tertiary menu when we hover on a secondary menu item. */
+	visibility: visible;
+}
+#primarynav ul ul li:hover ul ul {
+	/* The previous rule cascades and shows all sub menu's. So we */
+	/* need a more specific rule to turn back off quaternary menus. */
+	visibility: hidden;
+}
+#primarynav ul ul ul li:hover ul {
+	/* Display the next menu layer when we hover on its parent. */
+	visibility: visible;
+}
+/* no rules yet for fifth level */
+
+/* SECONDARY NAVIGATION
+======================================== */
+#sidenav ul li {
+	margin: 0; 
+	/* This gives us white space break if we have two lists in the side nav. */
+	padding: 1em 0 0 0;
+	background-color: #fff;
+	list-style: none;
+	color: #fff;
+	font-weight: bold; 
+}
+#sidenav ul li:first-child {
+	/* This removes the white space break above the first menu, only works for FF. */
+	/* We use a -1em margin-top in ie.css to do the same. */
+	padding-top: 0;
+}
+#sidenav ul li a {
+	color: #FFF;
+	background-color: #59798F;
+	display: block;
+	padding: 0.25em  0.25em  0.25em .5em;
+}
+#sidenav ul ul {
+	padding: 0 0 1em 0;
+	margin: 0;
+	list-style: none;
+}
+#sidenav ul ul li {
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px dotted #000;
+	font-weight: normal;
+	background-color: #EADBB6;
+}
+#sidenav ul ul li a {
+	color: #000;
+	background-color: #EADBB6;
+	display: block;
+	padding: 0.25em  0.25em  0.25em .5em;
+}
+#sidenav ul ul ul {
+	padding: 0;
+	margin: 0;
+	font-size: 80%;
+}
+#sidenav ul ul ul li {
+	font-weight: normal;
+	background-color: #F2E9D3;
+}
+#sidenav ul ul ul li:last-child {
+	/* css standard, not recoginzed by ie: applicable to firefox */
+	border-bottom: none;
+}
+#sidenav ul ul ul li a {
+	display: block;
+	background-color: #F2E9D3;
+	padding: 0.25em .5em .25em 2em;
+}
+#sidenav ul ul .select a {
+	background-color: #FFF;
+	font-weight: bold;
+}
+#sidenav ul ul .select ul li a {
+	background-color: #F2E9D3;
+	font-weight: normal;
+}
+#sidenav ul ul ul .select a {
+	background: #F2E9D3 url(../images/accents/caret_rt.gif) no-repeat .6em .3em;
+}
+#sidenav a:hover {
+	color: #AF1732;
+}
+#sidenav ul .disabled > a {
+	/* selector only applicable to firefox */
+	color: #FFF;  
+}
+#sidenav ul ul .disabled a {
+	color: #000;
+}
+#sidenav ul ul .disabled ul li a {
+	color: #000;
+}
+#sidenav ul ul ul li a:hover {
+	color: #AF1732; 
+}
+#sidenav ul ul ul li.disabled a {
+	color: #999; 
+}
+#sidenav h2 {
+	clear: both;
+}
+#sidenav dl {
+	/* account identifier */
+	padding: 0 0 5px 0;
+	margin: 0 0 10px 0;
+	background-color: #E8EDF2;
+	width: 100%;
+}
+#sidenav dl dt {
+	padding: 0;
+	margin: 0 5px;
+	color: #555;
+}
+#sidenav dl dd {
+	padding: 0 0 0 7px;
+	margin: 0 5px 5px 5px;
+	color: #000;
+}
+#sidenav dl dd a  {
+	font-size: .85em;
+	color: #0000EE;
+	text-decoration: underline;
+}
+#sidenav dl dd a:hover a:visited {
+	font-size: .85em;
+	color: #0000EE;
+	text-decoration: underline;
+}
+
+/*  FAQS, DISCLAIMERS, FOOTNOTES, NEWS
+======================================== */
+.f-note {
+	padding: 0;
+	margin: 0;
+}
+.f-note dt {
+	font-style: normal;
+	font-weight: bold;
+	color: #000;
+	margin-left: 1em; 
+}
+.f-note dd {
+	margin-top: -1.25em; 
+}
+.f-note p span, .g-note p span {
+	font-style: normal;
+	font-weight: bold;
+	color: #000;	
+}
+.g-note {
+	margin-left: 3em; 
+	display: block;
+}
+.questions {
+	width: 75%;
+	padding: 0;
+	margin: 0;
+}
+.attract #content .questions {
+	width: 100%;
+}
+.questions dd .last {
+	padding-bottom: 2.5em;
+	margin-bottom: 2.5em;
+	border-bottom: 1px solid #ccc; 
+}
+.questions dt  {
+	color: #023D69;
+	font-style: normal;
+	font-weight: bold;
+}
+.questions dd {
+	margin-top: -1.25em; 
+}
+.news dd .last {
+	padding-bottom: 2.5em;
+	margin-bottom: 2.5em;
+	border-bottom: 1px solid #ccc; 
+}
+.news dt  {
+	font-style: normal;
+	font-weight: bold;
+	padding-bottom: 1em;
+}
+.news dd {
+	margin-top: -2.3em; 
+	margin-left: 6em;
+	padding-bottom: 1em;
+}
+.news ul {
+	list-style-type: none;
+	padding-bottom: 0;
+	padding-top: 0em;
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+.news li { 
+	text-align: left;
+	margin-left: -3em;
+	padding-left: 5.85em;
+	padding-bottom: 0.2em;
+	padding-top: 0;	
+}
+.news li span {
+	font-style: normal;
+	font-weight: bold;
+	padding-right: 1.1em;
+	margin-left: -5.85em;	
+}
+.news h2  {
+	padding-top: 0.75em;
+	padding-bottom: 0.75em;
+}
+
+/*  FLOW, SEARCH RESULTS, MARKET WATCH
+======================================== */
+.flow {
+	list-style: none;
+	width: 100%;
+	margin-top: 0;
+	padding-top: 0.25em;
+	padding-left: 0;
+}
+.flow ol {
+	list-style: none;
+	margin: 1em 0 0 0;	
+	padding: 1em 0 4.5em 0;
+	font-size: 90%;
+	width: auto;
+}
+.flow li {
+	width: 8em;
+	height:  2em;
+	margin: -1.75em 0 0 0;
+	padding: 1.5em 1em 1em 0;
+	float: left;  /*stack in a horizontal line */
+	font-weight: bold;
+	text-align: left;
+	clear: right; 
+	background: url(../images/accents/step.gif) left top no-repeat;
+}
+.flow li.on {
+	background: url(../images/accents/step_on.gif) left top no-repeat;
+}
+.app #content .flow ol li.last, .attract #content .flow ol li.last {
+	background: url(../images/accents/step_last.gif) left top no-repeat;
+}
+.app #content .flow ol li.on-last, .attract #content .flow ol li.on-last {
+	background: url(../images/accents/step_on_last.gif) left top no-repeat;
+}
+.flow li span {
+	white-space: normal;
+	position: relative;
+	display: block;
+	margin: 0;
+	font-weight: normal;
+	font-style: normal;
+	text-align: left;
+}
+.results dt.first {
+	margin-top: 1em;
+}
+.results dt {
+	background: #fff url(../images/accents/caret_rt.gif) left center no-repeat;
+}
+.results {
+	padding: 0;
+	margin: 0;
+}
+.results dt {
+	font-style: normal;
+	font-weight: bold;
+	color: #000;
+	margin-left: 0; 
+	margin-top: 0.5em;
+	padding: 0.25em 0 0.25em 1em;
+}
+.results dd {
+	padding: 0.75em 0 0.75em 0;
+	margin-top: -0.9em; 
+	margin-left: 1em;
+}
+.app  #content .results p, .attract  #content .results p {
+	margin-bottom: 0;
+	padding-bottom: 1.25em;
+}
+.app  #content .results p.last, .attract  #content .results p.last {
+	border-bottom: 1px solid #ccc; 
+}
+#sidenav .market  {
+	padding-bottom: 0.5em;
+}					
+#sidenav .market ul {
+	margin-bottom: 0; 
+}		
+#sidenav .market ul ul li {
+	padding-top: 0.2em;
+	padding-bottom: 0;
+	border-bottom: 0;
+}
+#sidenav .market ul ul {
+	padding-bottom: 0;
+}	
+#sidenav .market dl {
+	background-color: #EADBB6; 
+	padding-bottom: 0.15em;
+	margin-bottom: 0.15em;
+}
+#sidenav .market dd {
+	font-size: 85%;
+}
+
+/* LISTS, ORDERED LISTS
+======================================== */
+ul.dash-list {
+	margin: 0 auto .25em 2.5em;
+	padding: .5em 1em .5em 0;
+	color: #000;
+}
+ul.dash-list li {
+	margin: 0 2em 0 0;
+	line-height: 1.25em;
+}
+ul.dash-list ul {
+	list-style: none;
+	margin: 0;
+	padding: .25em 0 .25em 0;
+}
+ul.dash-list ul li {
+	padding: 0 0 0 1.25em;
+	background: #FFF url(../images/accents/dash.gif) no-repeat 0 .5em;
+}
+.panel ul.dash-list, .panel .dash-list li, .panel ul.dash-list ul, .panel .dash-list ul li {
+	background-color: #F2E9D3;
+}
+.jumplinks {
+	/* interpage navigation/ section links */
+	list-style: none;
+	padding: 0;
+	margin: 0 0 10px 0;
+	line-height: 1.3em;
+	font-size: 90%;
+}
+.jumplinks li {
+	padding: 0;
+	margin: 0;
+}
+.jumplinks a {
+	color: #369;
+}
+.family {
+	width: 31em;
+	height: auto;
+	z-index: 50;
+	position: absolute;
+	background-color: #BAC9D6;
+	left: 75px;
+	bottom: 100%;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	visibility: hidden;
+}
+.family ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+ol.steps {
+	margin: 0 auto 1em 0;
+	padding: .5em 1em .5em 0;
+	color: #000;
+	list-style-type: decimal;
+	list-style-position: inside;
+	font-weight: bold;  
+}
+ol.steps li {
+	margin: 0 2em 0 0;
+	line-height: 1.25em;
+	padding-bottom: .25em;
+}
+ol.steps ol {
+	list-style-type: lower-roman; 
+	margin: 0;
+	padding: .25em 0 .25em 0.25em;
+	font-weight: normal;
+}
+ol.steps ol ol {
+	list-style-type: decimal;
+	margin: 0;
+	padding: .25em 0 .25em 0.25em;
+	font-weight: normal;
+}			
+ol.steps ol ol ol {
+	list-style-type: lower-alpha;
+	margin: 0;
+	padding: .25em 0 .25em 0.25em;
+	font-weight: normal;
+}					
+ol.steps ol li {
+	padding: 0 0 0 1.25em;
+}
+
+/* BUTTONS
+======================================== */
+.b-promo {
+	width:auto;
+	overflow:visible;
+	background: #F2E9D3 url(../images/accents/b_red.gif) no-repeat right center;
+	font-size: 85%;
+	padding: 0 20px 0 5px;
+	border: 1px outset #000;
+	font-weight: bold;
+	margin-left: auto; 
+}
+input.b-arrow-red {
+	cursor: pointer;
+	background-image: url(../images/accents/b_red.gif);
+}
+input.b-arrow-blue {
+	cursor: pointer;
+	background-image: url(../images/accents/b_blue.gif);
+}
+input.b-arrow-pumpkin {
+	cursor: pointer;
+	background-image: url(../images/accents/pumpkin.gif);
+}
+input.b-arrow-bark {
+	cursor: pointer;
+	background-image: url(../images/accents/bark.gif);
+}
+input.b-arrow-forest {
+	cursor: pointer; 
+	background-image: url(../images/accents/forest.gif);
+}
+input.b-arrow-garnet {
+	cursor: pointer;
+	background-image: url(../images/accents/garnet.gif);
+}
+input.b-arrow-grass {
+	cursor: pointer;
+	background-image: url(../images/accents/grass.gif);
+}
+input.b-arrow-lake {
+	cursor: pointer;
+	background-image: url(../images/accents/lake.gif);
+}
+input.b-arrow-slate {
+	cursor: pointer;
+	background-image: url(../images/accents/slate.gif);
+}
+input.b-arrow-sun {
+	cursor: pointer;
+	background-image: url(../images/accents/sun.gif);
+}
+input.b-arrow-sunset {
+	cursor: pointer;
+	background-image: url(../images/accents/sunset.gif);
+}
+.b-task1 {
+	width:auto;
+	overflow:visible;
+	font-size: 85%;
+	padding: .2em .5em .1em .5em;
+	border: 1px solid; 
+	border-color: #999 #333 #333 #999;
+	background: #E8EDF2;
+	font-weight: bold;
+	margin-right: .5em;
+	}
+.b-task2 {
+	width:auto;
+	overflow:visible;
+	font-size: 85%;
+	padding: .2em .5em .1em .5em;
+	border: 1px solid; 
+	border-color: #CCC #666 #666 #CCC;
+	background: #BAC9D6;
+	font-weight: bold;
+	color: #333;
+	margin-right: .5em;
+}
+.b-task3 {
+	width:auto;
+	overflow:visible;
+	font-size: 85%;
+	padding: .2em .5em .1em .5em;
+	border: 1px solid; 
+	border-color: #444 #000 #000 #444;
+	background: #59798F;
+	font-weight: bold;
+	color: #FFF;
+ 	margin-right: .5em;
+}
+.b-task3-padded {
+	border: 1px solid; 
+	border-color: #444 #000 #000 #444;
+	background: #59798F;
+	font-weight: bold;
+	color: #FFF;
+	font-size: 14px;
+	margin-right: .5em;
+	padding: 10px;
+	margin: 0 10px 10px 0;
+	width: 85px;
+	white-space:normal;
+	*width: auto;	/* no wrap in IE7*/
+}
+
+.alignLeft { float:left; margin-right: 1em; }
+.alignRight { float:right; margin-left: 1em; 
+}
+/* BACKGROUND FILL
+======================================== */
+.fill-b-blue {
+	background: #023D69;
+}       
+.fill-b-blue-lite {
+	background: #819eb4;
+}     
+.fill-b-red {
+	background: #AF1732;
+}
+.fill-b-red-lite {
+	background: #d88b99;
+}
+.fill-bark {
+	background: #724E20;
+}
+.fill-bark-lite {
+	background: #b9a790;
+}
+.fill-cactus {
+	background: #B8D095;
+}
+.fill-cactus-lite {
+	background: #dce8cb;
+}
+.fill-canvas {
+	background: #EADBB6;
+}
+.fill-canvas-lite {
+	background: #f5eddb;
+}
+.fill-forest {
+	background: #006347;
+}
+.fill-forest-lite {
+	background: #80b1a3;
+}
+.fill-garnet {
+	background: #A14A3E;
+}
+.fill-garnet-lite {
+	background: #d0a59f;
+}
+.fill-grass {
+	background: #557A28;
+}
+.fill-grass-lite {
+	background: #aabd94;
+}
+.fill-lake {
+	background: #5A91C4;
+}
+.fill-lake-lite {
+	background: #acc8e2;
+}
+.fill-pumpkin {
+	background: #E58127;
+}   
+.fill-pumpkin-lite {
+	background: #f2c193;
+} 
+.fill-sky {
+	background: #ADD8F4;
+}
+.fill-sky-lite {
+	background: #d6ecf9;
+}
+.fill-slate {
+	background: #59798F;
+}
+.fill-slate-lite {
+	background: #acbcc7;
+}
+.fill-stone {
+	background: #B7B28C;
+}   
+.fill-stone-lite {
+	background: #dbd9c6;
+}
+.fill-sun {
+	background: #F4B531;
+}
+.fill-sun-lite {
+	background: #fadb98;
+}
+.fill-sunset {
+	background: #DD5126;
+}
+.fill-sunset-lite {
+	background: #eea893;
+}
+.fill-wheat {
+	background: #FDE285;
+}
+.fill-wheat-lite {
+	background: #fef1c2;
+}
+
+/* COLOR KEY
+======================================== */
+.colorkey dt  {
+	font-style: normal;
+	height: 100%;
+	width: 1.15em;
+	height: 1.15em;
+	margin: 0;
+	padding: 0.15em;
+}
+.colorkey dd {
+	margin-top: -1.5em; 
+	margin-left: 2em;
+	padding: 0.25em;
+}
+.colorkey .brdr  {
+	font-size: 85%;
+	text-align: center;	
+	border-left: 1px solid #000;
+	border-bottom: 1px solid #000;
+}
+.colorkey .brdr-last {
+	font-size: 85%;
+	text-align: center;	
+	border-left: 1px solid #000;
+	border-bottom: none;
+}
+
+/* LINKS
+======================================== */
+#wordmark .family {
+   cursor: default;
+}
+#wordmark a img {
+  opacity: 1.0;
+  filter:alpha(opacity=100); /*IE8 and earlier */
+}
+#wordmark:hover a img {
+  opacity: 0.7;
+  filter:alpha(opacity=70); /*IE8 and earlier */
+}
+#banner a {
+	color: #FFF;
+}
+#sidenav h2 a {
+	color: #FFF;
+}
+#sidenav a {
+	text-decoration: none;
+	color: #000;
+}
+.app #content a, .app-attract #content a {
+	color: #00F;
+}
+.app #content td a, .app-attract #content td a {
+	font-weight: normal;
+}
+.app #content a:hover, .app-attract #content a:hover {
+	color: #AF1732;
+}
+#content .datagrid th a {
+	color: #023D69;
+	text-decoration: underline;
+}
+#content .datagrid a:hover {
+	color: #AF1732;
+}
+#content .paging a {
+	color: #023D69;
+}
+#content .paging a:hover {
+	color: #AF1732;
+}
+.paging .disabled {
+ 	color: #999; 
+	text-decoration: none;
+	cursor: default;
+ }
+.paging .select {
+	background-color: #BAC9D6;
+}
+#content .paging .select a {
+	font-weight: bold;
+	text-decoration: none;
+}
+.paging .select a:hover {
+	color: #023D69;
+}
+.family a {
+	color: #000;
+}
+#sidenav a.disabled, #content a.disabled {
+	color: #999;
+}
+
+/* oaMega changes
+=======================================   */
+
+#globalnav li.oaMega div
+{
+	float:none;
+}
+#globalnav li.oaMega li {
+
+	border-left: 0;
+	clear: left;
+}
+
+#globalnav li.oaMega div.oaMegaDiv {
+	
+	visibility: hidden; 
+	width:341px;
+	margin:0;
+	padding:0;
+	z-index:120;
+	white-space:normal;
+	position:absolute;
+	
+}
+#globalnav li.oaMega div.oaMegaDiv a {
+	color:#023D69;
+	padding:5px;
+	font-size: 125%;
+}
+
+#globalnav li.oaMega:hover div.oaMegaDiv 
+{
+	visibility: visible;
+}
+#globalnav li.oaMega div.oaMegaDiv .oaMegaBod
+{
+/*	background-color: white; */
+}
+#globalnav li.oaMega div.oaMegaDiv .oaMegaHead {
+	background:transparent url(../images/accents/oaMegaBorderWhite.png) no-repeat scroll -1284px 0;
+	height:10px;
+	font-size: 0;    /*  IE small height bug fix  */
+	
+}
+#globalnav li.oaMega div.oaMegaDiv .oaMegaBod {
+	background:transparent url(../images/accents/oaMegaBorderWhite.png) repeat-y scroll -1625px 0;
+	padding:0 7px;
+	border-top:1px solid #FFF;
+}
+#globalnav li.oaMega div.oaMegaDiv .oaMegaFoot {
+	background:transparent url(../images/accents/oaMegaBorderWhite.png) no-repeat scroll -1966px 0; 
+	height:10px;
+	font-size: 0;    /*  IE small height bug fix  */
+}
+#globalnav li.oaMega div.oaMegaBod ul li a:hover 	
+{ 
+	color: #AF1732; 
+}
+#globalnav li.oaMega div.left {
+		right: 0;
+}

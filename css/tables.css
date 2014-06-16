@@ -1,0 +1,670 @@
+/* CSS Document tables.css */
+/* 2007.12.04-01 */
+/* TABLES
+======================================== */
+.datagrid {
+	margin-bottom: 1em;
+	/* Need to clear to keep "* Required fields" from going inside table */
+	clear: both;
+}
+.datagrid th, .datagrid td {
+	padding: .2em .3em;
+}
+.datagrid th.first, .datagrid td.first {
+	padding-left: .5em;
+}
+/* Override #content img */
+#content .datagrid img {
+	float: none;
+	margin: 0;
+}
+.datagrid th {
+	border-left: 1px solid #000;
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	color: #023D69;
+	text-align: left;
+	vertical-align: bottom;
+}
+.datagrid td {
+	border-left: 1px solid #000;
+	vertical-align: top;
+}
+.datagrid .first {
+	border-left-style: none;
+}
+.datagrid .odd {
+	background-color: #F2E9D3;
+}
+
+.datagrid td.td-subtotal {
+	border-top: 1px solid #000;
+	font-weight: bold;
+}
+
+/* DATAGRID options */
+.datagrid  .summary, .datagrid .summary-first {
+	border: none;
+	border-top: 3px double #000;
+}
+.datagrid  .row-submit td, td.row-submit {
+	border-left: none;
+	border-bottom: none;
+	background-color: #FFF;
+	padding-top: .75em;
+}
+.datagrid .summary-first {
+	font-weight: bold;
+}
+th.aln-num, td.aln-num {
+	/* right align some columns (e.g. $, %'s other numbers) */
+	text-align: right;
+}
+.datagrid .asc {
+	background: #FFF url(../images/accents/up.gif) right bottom no-repeat;
+	padding-right: 1em;
+}
+.datagrid .dsc {
+	background: #FFF url(../images/accents/down.gif) right bottom no-repeat;
+	padding-right: 1em;
+}
+/* add some padding to left and right floated text in a datagrid */
+/* you can use these to put two data items in the same column the first one floated left the second right */
+.datagrid .left {padding-right: .5em; white-space: nowrap;}
+.datagrid .right {padding-right: 0; white-space: nowrap;}
+/* make a label in a datagrid flow outside of it's table column */
+.datagrid .overflow {white-space: nowrap; position: absolute;}
+html:not([dummy]) .datagrid .overflow {position: static; width: 10px; display: block; overflow: visible;}
+
+/* More datagrid options */
+.datagrid td.blank,
+.datagrid th.blank {
+	border: 0;
+ 	vertical-align: top;
+	background-color: white;
+}
+.datagrid .oaActionControl {
+	background-color: #E8EDF2;
+	text-align: center;
+}
+.datagrid .oaActionControl tbody tr:first-child td {
+	padding-top: .5em;
+}
+.oaActionControl td, th.aln-center, td.aln-center {
+	text-align: center;
+}
+.oaActionControl td:first-child, th.aln-left, td.aln-left {
+	text-align: left;
+}
+
+.app .datagrid .highlight .first,
+.app-wide .datagrid .highlight .first {
+	background-image: url(../images/accents/highlight.gif);
+	background-position: -1px 50%;
+	background-repeat: no-repeat;
+}
+.app p.highlight,
+.app-wide p.highlight {
+	padding-left: 10px;
+	padding-bottom: 2px;
+	background-image: url(../images/accents/highlight.gif);
+	background-position: left top;
+	background-repeat: no-repeat;
+}
+
+/* Compound Data Grid */
+/* ------------------------------------------------------------------------------------------------------------*/
+/* A series of data grid's nested with two levels in outer tables. The outermost table should use H2's for a  */
+/* primary heading the inner table should use H3's for secondary headings. */
+.cmpddatagrid td {
+	/* Worked better if I put margin-left on the inner table and datagrid, but IE is clipping the datagrid. */
+	padding: 0 0 0 25px;
+}
+.cmpddatagrid .datagrid td,
+.cmpddatagrid tfoot td {
+	/* Override values from .cmpddatagrid td */
+	padding: .2em .3em;
+}
+.cmpddatagrid .datagrid td.first {
+	padding-left: .5em;
+}
+.app #content .cmpddatagrid  h2, .app-wide #content .cmpddatagrid h2,
+.app #content .cmpddatagrid  h3, .app-wide #content .cmpddatagrid h3 {
+	border: none;
+	padding-bottom:1px;
+}
+.cmpddatagrid h2 {
+	/* Contortions to keep IE from clipping the datagrid. Pull headers back out into open space. */
+	margin-left: -25px;
+	font-size: 125%;
+}
+.cmpddatagrid h3 {
+	/* Contortions to keep IE from clipping the datagrid. Pull headers back out into open space. */
+	margin-left: -25px;
+	font-size: 110%;
+	font-weight: bold;
+}
+
+/* Record Controls
+------------------------------------------- */
+/* Encloses the whole thing, to keep it on 1 line. */
+.paging-wrapper {
+	text-align: center; 
+	height: 1.5em;
+	padding-bottom: 0.25em;
+}
+/* Displays the number of records in the dataset (X to Y of Z). */
+.records {
+	float: right;
+}
+/* Displays the combobox to select the number of rows per page. */
+.rows {
+	float: left;
+}
+/* Centers the able with the page navigation controls between .records and .rows. */
+.paging {
+	width: auto;
+	margin-left: auto; 
+	margin-right: auto;
+}
+.paging td {
+	border: none;
+	padding: 0 .25em;
+	color: #999;
+}
+
+/* oac:address */
+table.address {
+	margin-top: -1em;
+	background-color: #F2E9D3;
+	margin-bottom: 1em;
+}
+.address td  {
+	padding-top: 0.25em;
+	padding-left: 0.65em;
+	padding-bottom: 0.25em;
+}
+.address td input.radio {
+	padding-right: 2.5em;
+}
+
+/* DATA TABLES */
+table.simple, table.record-id {
+	font-weight: bold;
+	width: 100%;
+	/* Need to clear to keep "* Required fields" from going inside table */
+	clear: both;
+}
+/* Override #content img */
+#content .simple img, #content .record-id img {
+	float: none;
+	margin: 0;
+}
+.record-id {
+	margin-bottom: 1em;
+	background-color: #E8EDF2;
+}
+.record-id label, .record-id .label {
+	color: #333;
+	font-weight: normal;
+}
+.record-simple {
+	background-color: #E8EDF2;
+	margin: 1.5em 0 .5em 0;
+}
+.simple, .simple-text {
+	background-color: #F2E9D3;
+	margin-bottom: 1em;
+}
+.attract table.simple, .attract table.simple-text {
+	border-top: 1px solid #000;
+	margin-top: 1px;
+}
+.simple th, .simple td, .record-simple th, .record-simple td, .record-id th, .record-id td {
+	padding: .25em .5em;
+}
+.simple-text td {
+	padding: .5em;
+}
+.simple td, .simple-text td, .record-simple td, .record-id td {
+	vertical-align: top;
+	border-bottom: 1px solid #FFF;
+}
+.simple td, .record-simple td {
+	font-weight: normal;
+}
+.simple-text td {
+	font-weight: normal;
+}
+.simple .last td, .simple-text .last td {
+	border: 0;
+}
+.simple label, .record-simple label, .simple .label, .record-simple .label {
+	font-weight: bold;
+	color: #333;
+}
+.simple input {
+	border-width: 1px;
+}
+.simple th, .simple-text th, .record-id th {
+	text-align: left;
+	border-bottom: 1px solid #FFF;
+	color: #023D69;
+}
+.simple td h4 {
+	color: #023D69;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 1em;
+}
+
+/* Complex Datagrid.  */
+/* Data grid with optional secondary column and row headings as well as sub-totals, totals, and grand totals. */
+/* ---------------------------------------------------------------------------------------------------------- */
+
+/* Base styles for the TABLE, TD and TH */
+.cmplxdatagrid {
+	margin-bottom: 1.5em;
+}
+.cmplxdatagrid th {
+	vertical-align: bottom;
+	border-bottom: 1px solid #000;
+	padding: 1.7em .5em .25em .5em;
+	font-weight: bold;
+	font-style: italic;
+}
+.cmplxdatagrid td {
+	vertical-align: bottom;
+	/* If the row has a heading and the label wraps, then it can overlap the header. */
+	white-space: nowrap;
+	border-right: 1px solid #CCC;
+	border-bottom: 1px solid #CCC; 
+	padding: .1em .25em;
+}
+
+/* -- Secondary Column Header -- */
+.cmplxdatagrid th span {
+	/* Span in the header is a multi-column header. We force it not to wrap, then position it absolutely to take it
+	   out of the content flow, and push it up and to the left. We use a large top padding on the th to give up space
+	   to put this text. */
+	white-space: nowrap;
+	position: absolute;
+	display: block;
+	margin-left: -6em;
+	margin-top: -1.7em;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 120%;
+}
+html:not([dummy]) .cmplxdatagrid th span {
+	/* This rule targets Mozilla and Safari. */
+	/* It uses overflow to get the span to layout outside it's containing table cell. This allows us to */
+	/* use static positioning and avoid a Mozilla printing bug with absolutely positioned elements. */
+	position: static;
+	padding-bottom: .2em;
+	width: 10px;
+	overflow: visible;
+}
+.cmplxdatagrid th.row-noheading {
+	/* If the columns don't need a secondary heading, put class="row-noheading" on the header row to */
+	/* eliminate the extra space. */
+	padding-top: .25em;
+}
+.cmplxdatagrid thead .col-h1,
+.cmplxdatagrid thead .col-h2 {
+	border-bottom: 1px solid #000;
+}
+
+/* -- Column Styles -- */
+.cmplxdatagrid .col-total {
+	border-right: 1px solid #000;
+}
+.cmplxdatagrid .col-label {
+	border-right: none;
+}
+
+/* -- Row Header Styles -- */
+.cmplxdatagrid .row-h1 td {
+	/* Row with a single primary header. The padding creates the necesary space above the label */
+	/* 1.4em line-height of primary heading + 1em catagory seperation = 2.4em */
+	padding-top: 2.4em;
+}
+.cmplxdatagrid .row-h1-first td {
+	/* Remove the 1em catagory seperation space on the first table row. */
+	/* 1.4em line-height of primary heading = 2.4em */
+	padding-top: 1.4em;
+}
+.cmplxdatagrid .row-h2 td {
+	/* Row with a single secondary header. The padding creates the necesary space above the label */
+	/* 1.2em line-height of secondary heading + 1em catagory seperation = 2.2em */
+	padding-top: 2.2em;
+}
+/* No!! .cmplxdatagrid .row-h2.row-first td  must start a cmplxdatagrid with a row containing a primary header!! */
+.cmplxdatagrid .row-h1-h2 td {
+	/* Row with a primary and secondary header. The padding creates the necesary space above the label */
+	/* 1.4em line-height of primary heading + 1.2em line-height of secondary heading + 1em catagory seperation = 3.6em */
+	padding-top: 3.6em;
+}
+.cmplxdatagrid .row-h1-h2-first td {
+	/* Row with a primary and secondary header. The padding creates the necesary space above the label */
+	/* Remove the 1em catagory seperation space on the first table row. */
+	/* 1.4em line-height of primary heading + 1.2em line-height of secondary heading = 2.6em */
+	padding-top: 2.6em;
+}
+.cmplxdatagrid .row-h1 .col-h1 {
+	/* primary header cell on a row which will have a single primary header */
+	padding-top: 1.0em;
+}
+.cmplxdatagrid .row-h1-first .col-h1 {
+	/* primary header cell on the first row which will have a single primary header */
+	/* 0 catagory seperation on first table body row */
+	padding-top: .2em;
+}
+.cmplxdatagrid .row-h2 .col-h2 {
+	/* secondary header cell on a row which will have a single secondary header */
+	padding-top: 1.0em;
+}
+/* No!! .cmplxdatagrid .row-h2.row-first .col-h2  must start a cmplxdatagrid with a row containing a primary header!! */
+.cmplxdatagrid .row-h1-h2 .col-h1 {
+	/* primary header cell on a row which will have primary and secondary headers */
+	padding-top: 1.0em;
+}
+.cmplxdatagrid .row-h1-h2-first .col-h1 {
+	/* primary header cell on the first row which will have primary and secondary headers */
+	padding-top: .2em;
+}
+.cmplxdatagrid .row-h1-h2 .col-h2 {
+	/* secondary header cell on a row which will have primary and secondary headers */
+	/* 1.5em line-height of primary heading + 1em catagory seperation = 2.5em */
+	padding-top: 2.5em;
+}
+.cmplxdatagrid .row-h1-h2-first .col-h2 {
+	/* secondary header cell on the first row which will have primary and secondary headers */
+	/* 1.5em line-height of primary heading */
+	padding-top: 1.5em;
+}
+/* Need to add .(app|app-wide) #content to override styles from typography.css */
+.app #content .cmplxdatagrid td.col-h1 h1,
+.app-wide #content .cmplxdatagrid td.col-h1 h1 {
+	/* primary headings in bold larger font */
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	font-size: 1.15em;
+	border-bottom: none;
+	color: #000;
+	margin: 0;
+	/* white-space: normal; */
+}
+.app #content .cmplxdatagrid td.col-h2 h2,
+.app-wide #content .cmplxdatagrid td.col-h2 h2 {
+	/* secondary headings in bold itelic */
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-weight: bold;
+	border-bottom: none;
+	color: #000;
+	margin: 0;
+	/* white-space: normal; */
+}
+.cmplxdatagrid td.col-h1 h1,
+.cmplxdatagrid td.col-h2 h2 {
+	display: none;
+}
+.cmplxdatagrid .row-h1-h2-first td.col-h1 h1,
+.cmplxdatagrid .row-h1-h2-first td.col-h2 h2,
+.cmplxdatagrid .row-h1-h2-first td.col-h2 h3,
+.cmplxdatagrid .row-h1-first td.col-h1 h1,
+.cmplxdatagrid .row-h1-h2 td.col-h1 h1,
+.cmplxdatagrid .row-h1-h2 td.col-h2 h2,
+.cmplxdatagrid .row-h1-h2 td.col-h2 h3,
+.cmplxdatagrid .row-h1 td.col-h1 h1,
+.cmplxdatagrid .row-h2 td.col-h2 h2,
+.cmplxdatagrid .row-h2 td.col-h2 h3,
+.cmplxdatagrid .row-total td.col-h2 h2,
+.cmplxdatagrid .row-grand-total td.col-h1 h1
+{
+	/* From previous rule, all spans are display none. So now we'll redisplay only specific spans on heading or total */
+	/* lines in the first or second column where we have headings. */
+	display: block;
+	/* We have to put the headings in a span so we can absolutely position them to remove them from the flow layout. */
+	/* This is how we get them to display outside of their table column's width. 	*/
+	position: absolute;
+	/* Force it to 1 line. If it wraps it would overlap the heading or label below it. */
+	 white-space: nowrap;
+}
+html:not([dummy]) .cmplxdatagrid .row-h1-h2-first td.col-h1 h1,
+html:not([dummy]) .cmplxdatagrid .row-h1-h2-first td.col-h2 h2,
+html:not([dummy]) .cmplxdatagrid .row-h1-first td.col-h1 h1,
+html:not([dummy]) .cmplxdatagrid .row-h1-h2 td.col-h1 h1,
+html:not([dummy]) .cmplxdatagrid .row-h1-h2 td.col-h2 h2,
+html:not([dummy]) .cmplxdatagrid .row-h1 td.col-h1 h1,
+html:not([dummy]) .cmplxdatagrid .row-h2 td.col-h2 h2,
+html:not([dummy]) .cmplxdatagrid .row-total td.col-h2 h2,
+html:not([dummy]) .cmplxdatagrid .row-grand-total td.col-h1 h1 
+{
+	/* This rule targets Mozilla and Safari. */
+	/* It uses overflow to get the span to layout outside it's containing table cell. This allows us to */
+	/* use static positioning and avoid a Mozilla printing bug with absolutely positioned elements. */
+	position: static;
+	width: 30px;
+	overflow: visible;
+}
+.cmplxdatagrid .col-label-wrap 
+{
+	white-space: normal;
+}
+/* allows identifier to be placed in front of specific rows */
+.not-sel, span .not-sel {
+	padding-left: 10px;
+}
+.sel, span .sel {
+	background: #fff url(../images/accents/checkmark_black.gif) left 25% no-repeat;
+	padding-left: 10px; 
+}
+
+/* -- Row Totals Styles -- */
+/* The basic row styles for sub-total, total, grand-total can be used in any table */
+.row-sub-total td, td.row-sub-total {
+	border-left: none;
+	/* This has to be 2px otherwise by border-colapse rules it will be dotted from the bottom border above. */
+	border-top: 2px solid #888;
+	font-style: italic;
+	background-color: #E8EDF2;
+}
+.row-total td, td.row-total {
+	border-left: none;
+	border-top: 2px solid #555;
+	border-bottom: 3px double #000;
+	background-color: #BAC9D6;
+}
+.row-grand-total td, td.row-grand-total {
+	border: none;
+	border-top: 4px solid #444;
+	border-bottom: 4px double #000;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #59798F;
+	text-transform: uppercase;
+}
+.cmplxdatagrid .row-sub-total td.col-h1,
+.cmplxdatagrid .row-sub-total td.col-h2 {
+	/* Make the row-sub-total shading look like its indented 2 levels. */
+	background-color: transparent;
+}
+.cmplxdatagrid .row-total td.col-h2 {
+	border-top: 2px solid #555;
+	border-bottom: 3px double #000;
+}
+.cmplxdatagrid .row-total td.col-h1 {
+	/* Make the row-total shading look like its indented 1 level. */
+	background-color: transparent;
+}
+/* Need to add .(app|app-wide) #content to override styles from typography.css */
+.app #content .cmplxdatagrid .row-total td.col-h2 h2,
+.app-wide #content .cmplxdatagrid .row-total td.col-h2 h2 {
+	font-style: normal;
+	font-weight: normal;
+}
+.cmplxdatagrid td.col-h1,
+.cmplxdatagrid td.col-h2 {
+	/* Headings are vertically align with the top of the cell, then we adjust padding-top to push/pull them down/up. */
+	vertical-align: top;
+	border: none;
+	width: 30px;
+}
+html:not([dummy]) .cmplxdatagrid .row-grand-total td.col-h1,
+html:not([dummy]) .cmplxdatagrid .row-total td.col-h2 {
+	/* Labels on the total rows look better bottom align with the totals. */
+	/* But, in IE this pushes the absolutely positioned labels out of the row. */
+	vertical-align: bottom;
+}
+.cmplxdatagrid .row-total td {
+	padding: .1em .25em .1em .1em;
+}
+.cmplxdatagrid .row-grand-total td {
+	padding: .1em .15em .1em 0;
+	font-size: 90%;
+}
+.cmplxdatagrid .row-grand-total td.col-h1,
+.cmplxdatagrid .row-grand-total td.col-h2 {
+	border-top: 4px solid #444;
+	border-bottom: 4px double #000;
+}
+/* Need to add .(app|app-wide) #content to override styles from typography.css */
+.app #content .cmplxdatagrid .row-grand-total td.col-h1 h1,
+.app-wide #content .cmplxdatagrid .row-grand-total td.col-h1 h1 {
+	font-size: 1em;
+	padding-left: .4em;
+	color: #FFF;
+}
+.cmplxdatagrid .row-grand-total .col-total {
+	border-right: 1px solid #000;
+}
+/* Need to add .(app|app-wide) #content to override styles from layout.css */
+.app #content .cmplxdatagrid td img {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Scrollable region. Constrain larger data (like a table) */
+/* to a fixed size scrollable region. There are some IE specific rules */
+/* that go along with this. */
+.scroll-rgn {
+	border: 1px solid #999;
+	border-top: none;
+	height: 195px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+.two-col .scroll-rgn .datagrid {
+	width: 360px;
+}
+.table-scroll table {
+	float: left;
+	width: 100%;
+}
+
+.table-subnote {
+	color: #666666; 
+	font-style: italic; 
+	font-size: .9em;
+}
+
+/* these are used to apply set widths to data columns */
+td.pct1, th.pct1  {width:1%;}
+td.pct2, th.pct2  {width:2%;}
+td.pct3, th.pct3  {width:3%;}
+td.pct4, th.pct4  {width:4%;}
+td.pct5, th.pct5  {width:5%;}
+td.pct6, th.pct6  {width:6%;}
+td.pct7, th.pct7  {width:7%;}
+td.pct8, th.pct8  {width:8%;}
+td.pct9, th.pct9  {width:9%;}
+td.pct10, th.pct10  {width:10%;}
+td.pct11, th.pct11  {width:11%;}
+td.pct12, th.pct12  {width:12%;}
+td.pct13, th.pct14  {width:13%;}
+td.pct13, th.pct14  {width:14%;}
+td.pct15, th.pct15  {width:15%;} 
+td.pct16, th.pct16  {width:16%;}
+td.pct17, th.pct17  {width:17%;} 
+td.pct18, th.pct18  {width:18%;}
+td.pct19, th.pct19  {width:19%;}
+td.pct20, th.pct20  {width:20%;}
+td.pct21, th.pct21  {width:21%;}
+td.pct22, th.pct22  {width:22%;}
+td.pct23, th.pct23  {width:23%;}
+td.pct24, th.pct24  {width:24%;}
+td.pct25, th.pct25  {width:25%;}
+td.pct26, th.pct26  {width:26%;}
+td.pct27, th.pct27  {width:27%;}
+td.pct28, th.pct28  {width:28%;}
+td.pct29, th.pct29  {width:29%;}
+td.pct30, th.pct30  {width:30%;}
+td.pct33, th.pct33  {width:33%;} 
+td.pct34, th.pct34  {width:34%;} 
+td.pct35, th.pct35  {width:35%;}
+td.pct40, th.pct40  {width:40%;}
+td.pct45, th.pct45  {width:45%;}
+td.pct50, th.pct50  {width:50%;}
+td.pct55, th.pct55  {width:55%;}
+td.pct60, th.pct60  {width:60%;}
+td.pct65, th.pct65  {width:65%;}
+td.pct66, th.pct66  {width:66%;} 
+td.pct67, th.pct67  {width:67%;} 
+td.pct70, th.pct70  {width:70%;}
+td.pct75, th.pct75  {width:75%;}
+td.pct80, th.pct80  {width:80%;}
+td.pct85, th.pct85  {width:85%;}
+td.pct90, th.pct90  {width:90%;}
+td.pct91, th.pct91  {width:91%;}
+td.pct92, th.pct92  {width:92%;}
+td.pct93, th.pct93  {width:93%;}
+td.pct94, th.pct94  {width:94%;}
+td.pct95, th.pct95  {width:95%;}
+td.pct96, th.pct96  {width:96%;}
+td.pct97, th.pct97  {width:97%;}
+td.pct98, th.pct98  {width:98%;}
+td.pct99, th.pct99  {width:99%;}
+td.pct100, th.pct100  {width:100%;}
+td.skinny, th.skinny  {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* remove white bottom border on radio buttons */
+.nobottomborder td {
+	border-bottom: none;
+}
+
+.nobottommargin {
+	margin-bottom: 0;
+}
+
+table.no-border td {
+  border-bottom: none;
+  border-left: none;
+}
+
+table.pct1 {
+	width:1%;
+}
+.hoverPopup {
+		position:absolute;
+		padding: 3px 6px 4px 6px;
+		border: 1px solid #336;
+	  	background-color: #f7f7ee;
+		font: normal 0.9em/1.2em arial, helvetica, sans-serif;
+		text-align: left;
+		color: #000;
+	}
+h3.tableHeader,
+.app #content h3.tableHeader a,.app-wide #content h3.tableHeader a  {
+
+ 	color:#000;
+}
+.datagrid .forcedWidth200
+{
+	width:200px;
+}

@@ -1,0 +1,507 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+		<head>
+<script type="text/javascript" src="js/navmenu.js"><!--
+
+//--></script>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="wasHost" content="01">
+<title>OneAmerica Online Services</title>
+<script type="text/javascript">
+		var oaResourcePath = "/oacommon/public/";
+		var oaBlankImage = "/oacommon/public/images/pngbehavior/blank.gif";
+		</script>
+<link href="css/enterprise.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/onlineservices.css" rel="stylesheet" type="text/css" media="all">
+<link href="css/onlineservices_print.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://www.ols.oneamerica.com/oacommon/public/images/identity/OneAmericaFavorites.ico" rel="shortcut icon" type="image/x-icon">
+<script type="text/javascript" src="js/jquery-1.js"></script>
+<script type="text/javascript" src="js/oa-util.js"></script>
+
+<!--[if lt IE 8]>
+		<link href="/oacommon/public/styles/ie7.css"
+			  rel="stylesheet" type="text/css" media="all"/>
+		<![endif]-->
+
+<!--[if lt IE 7]> 
+		<link href="/oacommon/public/styles/ie.css" 
+			  rel="stylesheet" type="text/css" media="all"/>
+		
+		<style type="text/css" media="screen">
+		img {behavior:	url("/oacommon/public/scripts/pngbehavior.htc");}
+		</style>
+		
+		<script type="text/javascript" 
+			    src="js/helper.js"></script>			    
+		<![endif]-->
+
+<meta name="DCS.dcsuri" content="/home.jsp">
+<meta name="WT.sv" content="prod01">
+		</head>
+
+		<body class="app home">
+<div id="banner">
+			<div id="globalnav">
+		<div id="search">
+					<form target="" id="globalSearchForm" name="globalSearchForm" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+				<input id="globalSearchForm:_idJsp1" name="globalSearchForm:_idJsp1" value="Enter keyword(s)" onfocus="if (this.value == 'Enter keyword(s)') {this.value = '';}" type="text">
+				<script><!--
+document.forms['globalSearchForm'].onkeypress=function (event) {return submitOnEnter(event, 'globalSearchForm:search');}
+//--></script>
+				<input id="globalSearchForm:search" name="globalSearchForm:search" value="Search" onclick="clear_globalSearchForm();" class="b-promo b-arrow-red" type="submit">
+				<input name="globalSearchForm_SUBMIT" value="1" type="hidden">
+				<input name="jsf_sequence" value="35" type="hidden">
+				<input value="" name="globalSearchForm:_link_hidden_" type="hidden">
+				<script type="text/javascript"><!--
+function clear_globalSearchForm() {
+  var f = document.forms['globalSearchForm'];
+  f.elements['globalSearchForm:_link_hidden_'].value='';
+  f.target='';
+}
+clear_globalSearchForm();
+//--></script>
+			</form>
+				</div>
+		<form id="globalNavMenuForm" name="globalNavMenuForm" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+					<input name="globalNavMenuForm:globalNavMenuInput" type="hidden">
+					<ul id="globalNavMenu">
+				<li class="first"><a href="#" onclick="oa_navigate('globalNavMenuForm','globalNavMenuForm:globalNavMenuInput','contactList',false);return false;">Contact List</a></li>
+				<li class=""><a href="#" onclick="oa_navigate('globalNavMenuForm','globalNavMenuForm:globalNavMenuInput','updtAcctInfo',false);return false;">Update Account Info</a></li>
+				<li class=""><a href="#" onclick="oa_navigate('globalNavMenuForm','globalNavMenuForm:globalNavMenuInput','logoutlink',false);return false;">Logout</a></li>
+			</ul>
+					<input name="globalNavMenuForm_SUBMIT" value="1" type="hidden">
+					<input name="jsf_sequence" value="35" type="hidden">
+				</form>
+	</div>
+			<div id="identity"><a id="_idJsp3" name="_idJsp3" href="#" target="_blank" class="logo"><img src="images/logoOA.png" alt="OneAmerica" title="OneAmerica" style="border: 0" class="screen" height="50" width="119"><img src="images/logoOA.png" alt="OneAmerica" title="OneAmerica" style="border: 0" class="print" height="50" width="119"></a><img src="images/online_services.gif" alt="Online Services" class="screen" height="27" width="168"><img src="images/online_services_print.gif" alt="Online Services" class="print" height="38" width="180"></div>
+			<div id="primarynav">
+		<form id="primaryNavMenuForm" name="primaryNavMenuForm" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+					<input name="primaryNavMenuForm:primaryNavMenuInput" type="hidden">
+			<ul id="primaryNavMenu">
+				<li class="first disabled submenu"><a href="#">Home</a></li>
+				<li class="disabled submenu"><a href="#">Sales Connection</a>
+					<ul>
+						<li><a href="#">Run Sales Connection</a></li>
+						<li><a href="#">Practice Sales Connection</a></li>
+						<li><a href="#">General Information</a></li>
+						<li><a href="#">Illustration Training</a></li>
+						<li><a href="#">eApp Training</a></li>
+					</ul>
+				</li>
+				<li class="disabled submenu"><a href="#">My Business</a>
+					<ul>
+						<li><a href="#">Pending</a></li>
+						<li><a href="#">Online Submission</a></li>
+						<li><a href="#">AppLog</a></li>		
+						<li><a href="#">1035 Log</a></li>
+						<li class="submenu"><a href="#">Commissions</a>
+							<ul>
+								<li><a href="#">One Statement</a></li>
+								<li><a href="#">One Daily Compensation Activity</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Inforce</a></li>
+						<li><a href="#">Life Events</a></li>
+						<li><a href="#">Production Reports</a></li>
+						<li><a href="#">E&amp;O</a></li>
+						<li><a href="#">My Profile</a></li>
+					</ul>
+				</li>
+				<li class="disabled submenu"><a href="#">Products</a>
+					<ul>
+						<li><a href="#">Term</a></li>
+						<li><a href="#">Whole Life</a></li>
+						<li class="submenu"><a href="#">Universal Life</a>
+							<ul>
+								<li><a href="#">American Accumulator</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Annuities</a></li>
+						<li><a href="#">Care Solutions</a></li>
+						<li><a href="#">Disability Income</a></li>
+						<li><a href="#">Service Only Products</a></li>
+						<li><a href="#">State Approvals</a></li>
+						<li><a href="#">Life Insurance Riders</a></li>
+						<li class="submenu"><a href="#">Investments</a>
+							<ul>
+								<li><a href="#">Portfolio Descriptions</a></li>
+								<li><a href="#">Portfolio Performance</a></li>
+								<li><a href="#">Unit Values</a></li>
+								<li><a href="#">Product Prospectuses.</a></li>
+							</ul>
+						</li>	
+					</ul>
+				</li>
+				<li class="disabled submenu"><a href="#">Sales Support</a>
+					<ul>
+						<li class="submenu"><a href="#">Sales Support</a>
+							<ul>
+								<li><a href="#">Insurance Journey Series</a></li>
+								<li><a href="#">Individual Product Kits</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Advanced Sales</a></li>
+						<li><a href="#">Vendor Relationships</a></li>
+						<li class="submenu"><a href="#">Industry Programs</a>
+							<ul>
+								<li><a href="#">LIFE</a></li>
+								<li><a href="#">LIAM</a></li>
+								<li><a href="#">Industry Links</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li class="disabled submenu"><a href="#">Onboarding</a>
+					<ul>
+						<li><a href="#">Licensing &amp; Contracting</a></li>
+						<li class="submenu"><a href="#">Practice Management</a>
+							<ul>
+								<li><a href="#">Order Stationery</a></li>
+								<li><a href="#">Shop OneAmerica</a></li>
+							</ul>
+						</li>
+						<li class="submenu"><a href="#">Education</a>
+							<ul>
+								<li><a href="#">Industry Training</a></li>
+								<li><a href="#">Insurance Seminar Series</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Incentive Programs</a></li>
+						<li class="disabled submenu"><a href="#">Advertising</a>
+							<ul>
+								<li><a href="#">Advertising Guidelines</a></li>
+								<li><a href="#">Advertising Review</a></li>
+							</ul>
+						</li>
+						<li><a href="#">Writing Business</a></li>
+						<li><a href="#">Underwriting</a></li>
+					</ul>
+				</li>
+				<li class="disabled submenu"><a href="#">Market Conduct</a>
+					<ul>
+						<li><a href="#">Anti-Money Laundering Program</a></li>
+						<li><a href="#">Practice and Procedures Manual</a></li>
+						<li><a href="#">Producer Guidelines</a></li>
+						<li><a href="#">Corp Compliance Bulletins &amp; Updates</a></li>
+					</ul>
+				</li>
+			</ul>
+					<input name="primaryNavMenuForm_SUBMIT" value="1" type="hidden">
+					<input name="jsf_sequence" value="35" type="hidden">
+				</form>
+	</div>
+		</div>
+<div id="wrapper">
+			<div id="container">
+		<div id="content">
+					<form id="dataList1" name="dataList1" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+				<input name="dataList1_SUBMIT" value="1" type="hidden">
+				<input name="jsf_sequence" value="35" type="hidden">
+			</form>
+					<div class="four-col"> <img src="images/hAgent.jpg" alt=""/> 
+				
+				<!-- Begin 4 column touts-->
+				<div class="clearfix">
+							<div class="one-col">
+						<div class="tout"> <img alt="" src="images/t-sales-connection.png">
+									<h3><a href="#">Sales Connection</a></h3>
+									<p>Your one-stop resource for all of the tools needed to illustrate and submit.</p>
+								</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /one-col-->
+							<div class="one-col">
+						<div class="tout"> <img alt="" src="images/t-daily-commissions.png">
+									<h3><a href="#">Daily Commissions</a></h3>
+									<p>View daily commissions.</p>
+								</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /one-col-->
+							<div class="one-col">
+						<div class="tout"> <img alt="" src="images/t-inforce-search.png">
+									<h3><a href="#">Inforce Search</a></h3>
+									<p>Search by client name, policy number, or SSN.</p>
+								</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /one-col-->
+							<div class="one-col last-col">
+						<div class="tout"> <img alt="" src="images/t-center-of-excellence.png">
+									<h3><a href="#">Center of Excellence</a></h3>
+									<p>Assists your professional development and help you manage your practice.</p>
+								</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /one-col--> 
+						</div>
+				<!--/clearfix--> 
+				
+				<!-- End 4 column touts--> 
+				
+				<!-- Begin 2 column touts-->
+				
+				<div class="audience clearfix">
+							<div class="two-col">
+						<div class="tout">
+							<div class="headline">
+								<h3>News Flash</h3>
+							</div>
+							<img alt="" src="images/img-news-flash.png">
+							<div class="two-col-content">
+								<ul>
+									<li><a href="#" class="pdf">Americanization VP Vista<sup>SM</sup> Combine into Another Fund</a> &#8212; 05/29/2014</li>
+									<li><a href="#" class="pdf">Secure Income Stream Annuity Approved in California</a> &#8212; 05/21/2014</li>
+									<li><a href="#" class="pdf">Secure Income Stream Annuity Approved in California</a> &#8212; 05/21/2014</li>
+									<li><a href="#" class="pdf">Secure Income Stream Annuity Approved in California</a> &#8212; 05/21/2014</li>
+									<li>Go to the News Flash <a href="#">Archive</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /two-col-->
+					<div class="two-col last-col">
+						<div class="tout">
+							<div class="headline">
+								<h3>Success School</h3>
+							</div>
+								<img alt="" src="images/img_paris.jpg">
+								<div class="two-col-content">
+									<p>The 2014 conference is in Paris!</p>
+									<p><a href="#">Learn about the conference</a></p>
+								</div>
+						</div>
+						<!-- /tout--> 
+					</div>
+							<!-- /two-col--> 
+						</div>
+				<!-- /audience clearfix--> 
+				<!-- End 2 column touts-->
+				<div class="clearfix">
+							<div class="two-col">
+						<div class="headline">
+									<h3>Pending Quick View</h3>
+								</div>
+						<div class="">
+									<table class="datagrid">
+								<thead>
+											<tr>
+										<th class="first pct60">Office Name</th>
+										<th class="pct20">Office Number</th>
+										<th class="pct20">Number Pending</th>
+									</tr>
+										</thead>
+								<tfoot>
+											<tr>
+										<td class="row-total first pct60">Total</td>
+										<td class="row-total pct20"></td>
+										<td class="row-total pct20  aln-num">2,364.25</td>
+									</tr>
+										</tfoot>
+								<tbody id="_idJsp53:tbody_element">
+											<tr class="first">
+										<td class="first pct60">AIREY AGENCY </td>
+										<td class="pct20"><a id="" name="" href="#">BR603 </a></td>
+										<td class="pct20 aln-num">2.0</td>
+									</tr>
+											<tr>
+										<td class="first pct60">AIREY FINANCIAL GROUP </td>
+										<td class="pct20"><a id="" name="" href="#">BR488 </a></td>
+										<td class="pct20 aln-num">23.0</td>
+									</tr>
+											<tr>
+										<td class="first pct60">ALLEGIS FINANCIAL PARTNERS </td>
+										<td class="pct20"><a id="" name="" href="#">BR661 </a></td>
+										<td class="pct20 aln-num">345.5</td>
+									</tr>
+											<tr>
+										<td class="first pct60">AMERICAN ADVISORS LLC </td>
+										<td class="pct20"><a id="" name="" href="#">BR737 </a></td>
+										<td class="pct20 aln-num">16.0</td>
+									</tr>
+											<tr>
+										<td class="first pct60">AMERICAN HERITAGE FINANCIAL LL </td>
+										<td class="pct20"><a id="" name="" href="#">BR741 </a></td>
+										<td class="pct20 aln-num">9.0</td>
+									</tr>
+											<tr>
+										<td class="first pct60">AMERICAN UNITED LIFE </td>
+										<td class="pct20"><a id="" name="" href="#">BR308 </a></td>
+										<td class="pct20 aln-num">0.4</td>
+									</tr>
+											<tr>
+										<td class="first pct60">ANCHOR FINANCIAL GROUP LLC </td>
+										<td class="pct20"><a id="" name="" href="#">BR728 </a></td>
+										<td class="pct20 aln-num">41.0</td>
+									</tr>
+											<tr>
+										<td class="first pct60">ANDERSON </td>
+										<td class="pct20"><a id="" name="" href="#">BR733 </a></td>
+										<td class="pct20 aln-num">57.1</td>
+									</tr>
+											<tr>
+										<td class="first pct60">B AND L FINANCIAL ARCHITECTS L </td>
+										<td class="pct20"><a id="" name="" href="#">BR705 </a></td>
+										<td class="pct20 aln-num">15.0</td>
+									</tr>
+											<tr>
+										<td class="first pct60">BILL C BROWN AND ASSOCIATES </td>
+										<td class="pct20"><a id="" name="" href="#">BR593 </a></td>
+										<td class="pct20 aln-num">68.0</td>
+									</tr>
+										</tbody>
+							</table>
+								</div>
+						<!-- /scroll-rgn--> 
+					</div>
+							<!-- /two-col-->
+							
+							<div class="two-col last-col">
+						<div class="headline">
+									<h3>How Am I Doing?</h3>
+								</div>
+						<h2 id="_idJsp163" class="simple-header"><a id="calYearGA" name="calYearGA" href="/haid/haidDetailGA.faces" target="_blank">Agency Calendar Year Production</a></h2>
+						<table border="0" class="simple">
+									<tbody>
+								<tr>
+											<th class="label pct65"></th>
+											<th class="pct20 aln-num">FYPC</th>
+											<th class="pct15"></th>
+										</tr>
+								<tr>
+											<td class="label pct65">YTD FYPC Total</td>
+											<td class="pct20 aln-num">$533,996.43</td>
+											<td class="pct15"></td>
+										</tr>
+								<tr>
+											<td class="label pct65">YTD FYPC Total Adjusted for 50% Life Sales</td>
+											<td class="pct20 aln-num">$531,248.87</td>
+											<td class="pct15"></td>
+										</tr>
+							</tbody>
+								</table>
+						<h2 id="_idJsp175" class="simple-header"><a id="chairTripFa" name="chairTripFa" href="/wps/wcm/connect/ind/OnlineServices/My+Business/Incentives/Programs/Chairmans+Trip">Agency Chairman's Trip</a></h2>
+						<table border="0" class="simple">
+									<tbody>
+								<tr>
+											<th class="pct45"></td>
+									<th class="pct20 aln-num">Total FYPC
+										</td>
+									<th class="pct20 aln-num">Life FYPC
+										</td>
+									<th class="pct15 aln-num"></td>
+								</tr>
+								<tr>
+											<td class="pct45"><span class="label">YTD FYPC</span></td>
+											<td class="pct20 aln-num">$533,996.43</td>
+											<td class="pct20 aln-num">$265,624.43</td>
+											<td class="pct15 aln-num"></td>
+										</tr>
+							</tbody>
+						</table>
+						
+						<p><a id="calYearGApersonal" name="calYearGApersonal" href="/haid/haidDetail.faces" target="_blank">View Your Personal Production</a></p>
+						<p>See the <a id="bulletinGa" name="bulletinGa" href="/wps/wcm/connect/ind/OnlineServices/My+Business/Incentives/Programs/Monthly+Production+Bulletin">Production Bulletin</a> for definitions and qualifications.</p>
+					</div>
+						</div>
+				<!-- /clearfix-->
+				
+				<div class="footer-faux clearfix">
+							<div class="one-col">
+						<h3>Quick Links</h3>
+						<ul>
+							<li class=""><a href="#">Forms</a></li>
+							<li class=""><a href="#">Interest Rates</a></li>
+							<li class=""><a href="#">OneAmerica Strength Center</a></li>
+							<li class=""><a href="#">Downloads</a></li>
+							<li class=""><a href="#">Do Not Call Registry</a></li>
+						</ul>
+					</div>
+							<!-- /one-col-->
+							<div class="two-col last-col">
+						<h3>Contacts</h3>
+						<p> <strong>American United Life</strong><br>
+									<strong>Toll-Free:</strong> 1.877.999.9883</p>
+						<p> <strong>Care Solutions</strong><br>
+									<strong>Toll-Free:</strong> 1.800.275.5101<br>
+								</p>
+					</div>
+							<!-- /one-col /last-col --> 
+						</div>
+				<!-- /clearfix--> 
+			</div>
+					<!-- /four-col--> 
+				</div>
+		<!-- /content-->
+		<div id="sidenav">
+					<style type="text/css">
+		#sidenav dl dd a  {
+			font-size: .85em;
+			color: #0000EE;
+			text-decoration: underline;
+		}
+		#sidenav dl dd a:hover a:visited {
+			font-size: .85em;
+			color: #0000EE;
+			text-decoration: underline;
+		}
+	</style>
+				<!--<h2 id="_idJsp208">Login Information</h2>-->
+				<dl id="_idJsp209">
+				<dt id="_idJsp210">Welcome,</dt>
+				<dd id="_idJsp212">Scott R Evans</dd>
+				<dt id="_idJsp214">Acting as:</dt>
+				<dd id="_idJsp216">Joe Q Producer</dd>
+			</dl>
+					<form id="navMenuForm" name="navMenuForm" method="post" action="/home.faces" enctype="application/x-www-form-urlencoded">
+				<input name="navMenuForm:quicklinksMenuInput" type="hidden">	
+				<ul id="quicklinksMenu">
+					<li class="disabled submenu">
+						<h2>Quick Links</h2>
+						<ul>
+							<li><a href="#">Forms</a></li>
+							<li><a href="#">Interest Rates</a></li>
+							<li><a href="#">OneAmerica Strength Center</a></li>
+							<li><a href="#">Downloads</a></li>
+							<li><a href="#">Do Not Call Registry</a></li>
+						</ul>
+					</li>
+				</ul>
+				<div>
+							<input name="navMenuForm:appSwitchMenuInput" type="hidden">
+					<ul id="appSwitchMenu">
+						<li class="disabled submenu">
+							<h2>OneAmerica<sup>&reg;</sup> Affiliates</h2>
+							<ul>
+								<li class=""><a href="OnlineServices_AUL.htm">AUL</a></li>
+								<li class=""><a href="OnlineServices_StateLife.htm">State Life</a></li>
+								<li class="active"><a href="OnlineServices_PML.htm">PML</a></li>
+								<li class=""><a href="OnlineServices_OAS.htm">OneAmerica Securities</a></li>
+							</ul>
+						</li>
+					</ul>
+						</div>
+				<input name="navMenuForm_SUBMIT" value="1" type="hidden">
+				<input name="jsf_sequence" value="35" type="hidden">
+			</form>
+					<div class="tout-plain"> <a href="https://www.ols.oneamerica.com/wps/wcm/connect/ind/OnlineServices/Home/OneSource+Email+Archive"><img src="images/Get_Social_OLS_graphic.png" alt="OneSource Email Archive" border="0"></a> </div>
+					<!--/tout-plain-->
+					
+					<div class="tout-plain"> <a href="https://www.ols.oneamerica.com/wps/wcm/connect/ind/OnlineServices/Home/OneSource+Email+Archive"><img src="images/1SourceArchive.png" alt="OneSource Email Archive" border="0"></a> </div>
+					<!--/tout-plain--> 
+					
+				</div>
+	</div>
+		</div>
+<div class="clear"></div>
+<div id="footer">
+			<div id="wordmark"> <img src="images/wordmark.gif" alt="The companies of OneAmerica Financial Partners, Inc." title="The companies of OneAmerica Financial Partners, Inc." class="screen" border="0" height="25" width="336"> <img src="images/wordmark_print_hr.gif" alt="The companies of OneAmerica Financial Partners, Inc." title="The companies of OneAmerica Financial Partners, Inc." class="print" border="0" height="25" width="336"> </div>
+			<div id="disclosures">
+		<p class="links"> <a href="http://www.oneamerica.com/wps/wcm/connect/oa/Enterprise+Docs/Legal+Disclaimers" target="_blank">Legal Disclaimers and Terms of Use</a> | <a href="http://www.oneamerica.com/wps/wcm/connect/oa/Enterprise+Docs/Privacy+Statement" target="_blank">Privacy Statement</a> | 
+					Copyright 2002 to 2014, OneAmerica®, all rights reserved.</p>
+	</div>
+			<div id="disclaimer"> For company and recruiting use only. Not for public distribution. </div>
+		</div>
+</body>
+</html>

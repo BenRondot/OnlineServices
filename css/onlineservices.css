@@ -1,0 +1,866 @@
+/****************************************************************************************
+
+Copyright (c) 2013 OneAmerica
+
+AUTHOR Ben Rondot
+
+DATE		NAME		DESCRIPTON
+
+04/22/2014	Ben Rondot	Initial creation.
+
+****************************************************************************************/
+
+/*= Core styles
+---------------------------------------*/
+
+body {
+	font-size: 13px;
+}
+
+/* Margin settings */
+.mt20 { /* Margin, Top, 20px */
+	margin: 20px 0 0 0;
+}
+
+/* To use .caret add the class to a <b> class ex: <b class="caret"></b>  */
+.caret {
+    margin: 7px 0 0 0;
+	border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-top: 4px solid #C4B796; /* Controls the color of the caret */
+    content: "";
+    display: inline-block;
+    height: 0;
+    vertical-align: top;
+    width: 0;
+	/* hover color transition */
+	-webkit-transition:all 0.4s ease-in-out;
+	-moz-transition:all 0.4s ease-in-out;
+	-o-transition:all 0.4s ease-in-out;
+	transition:all 0.4s ease-in-out;
+}
+
+a:hover > .caret { 
+	margin-top: 7px !important;
+	border-top-color:#af1732 !important;
+}
+
+/* .clearfix will apply a small bit of content, hidden from view, after the parent element which clears the float */
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+/* Headers */
+.app #content h1 {
+	font-family: Arial,Helvetica,sans-serif;
+	border-bottom: none;
+	font-style: normal;
+	color: #585F69;
+    font-size: 24px;
+    line-height: 24px;
+	margin-bottom: 10px;
+    padding: 0;
+} 
+
+.app #content h2 {
+    border-bottom: none;
+    color: #023D69;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 18px;
+	font-weight: normal;
+    line-height: 20px;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.app #content h3 {
+    color: #023D69;
+    font-size: 16px;
+	font-weight: normal;
+	font-style:normal;
+    margin: 10px 0;
+    padding: 0;
+	border-bottom: none;
+}
+
+h4 {
+    color: #023D69;
+    font-size: 14px;
+	font-weight: normal;
+	font-style:normal;
+    margin: 10px 0;
+    padding: 0;
+	border-bottom: none;
+}
+
+a.pdf { /* Add the Adobe Acrobat icon when a link opens a .pdf */
+	background: url("../images/bg-pdf.gif") no-repeat scroll 100% 60% rgba(0, 0, 0, 0);
+    margin: 0 1px 0 0;
+    padding: 0 14px 0 0;
+}
+
+/*= Begin Structure
+---------------------------------------*/
+
+#container {
+	width: 960px;
+	height: auto;
+	padding: 0 0 0 0;
+	background: #fff;
+}
+
+#container:after {
+	clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+#content {
+	width:auto;
+}
+
+/*= End structure
+---------------------------------------*/
+
+/*= Begin header banner
+---------------------------------------*/
+
+#banner {
+	height: auto;
+	margin: 0;
+	background: #fff url("../images/bg_head.gif") repeat-x bottom left;
+}
+
+body.app #globalnav {
+    width: 960px;
+	margin: 0 30px 0 0;
+}
+
+/*** Begin global/utility navigation ***/
+
+#globalnav {
+    line-height: inherit;
+	margin: 0;
+}
+
+#globalnav div {
+    line-height: inherit;
+}
+
+#globalnav ul {
+    font-size: 12px;
+	margin: 8px 20px 0 0;
+}
+
+#globalnav li {
+    border-left: 1px solid #c7c7c7;
+}
+
+#globalnav li a {
+    color: #777;
+	margin: 3px 3px;
+	padding: 0;
+}
+
+#globalnav input { /* Search field and button */
+	margin: 5px 0 0 0;
+	font-size: 12px;
+	color: #999;
+	padding: 3px 8px;
+}
+
+input.b-arrow-red { /* search button only */
+    background-image: none;
+	background: #023D69;
+    cursor: pointer;
+	color: #fff !important;
+	border: none !important;
+}
+
+.b-promo { /* search button */
+    font-weight: normal;
+}
+
+/*** End global/utility navigation ***/
+
+#identity {
+	border: none;
+	border-width: 0;
+	height: 40px;
+	vertical-align: middle;
+	line-height: 40px;
+	position: relative;
+	z-index:2;
+}
+
+/* OneAmerica homepage logo */
+#identity .logo img, 
+body.app #identity .logo img {
+    left: 40px;
+    position: absolute;
+    top: -15px;
+}
+
+/* OnlineSerices image */
+body.app #identity img, body.app-wide #identity img,
+body.app-attract #identity img {
+	left: 180px;
+	right: auto;
+	top: 10px;
+}
+
+/*** Begin primary navigation ***/
+
+#primarynav {
+	width: 960px !important;
+	margin: 10px 0 15px 0;
+	padding: 0 0 0 0;
+	height: 30px;
+}
+
+#primarynav ul {
+	float: right;
+	font-size: 14px;
+}
+
+#primarynav ul li {
+	font-family: Georgia, serif;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #023d69;
+	background-color: inherit;
+	border: none;
+	line-height: 18px;
+}
+
+#primarynav li a {
+	color: #023d69;
+	padding: 2px 10px 2px 10px;
+}
+
+#primarynav li:hover, 
+#primarynav li.submenu:hover, 
+#primarynav ul.left li.submenu:hover  {
+	/* Highlight current menu item & transversal path. */
+	background-color: #eee;
+}
+
+#primarynav li:hover a {
+	/* When we hover on the primary nav menu link it will have a gray background. */
+	/* If we mouse into it's sub menu(s) we'd like to keep the background on the primary */
+	/* So this makes all link's text black while we're hovering anywhere in its menu or sub menus. */
+	color: #023d69;
+}
+
+#primarynav li a:hover,
+#primarynav li a:active {
+	background: #eee;
+}
+
+/* Dropdown menu */
+
+#primarynav ul ul li {
+	padding-right: 0;
+}
+
+#primarynav ul ul li:last-child {
+	border-bottom: none;
+}
+
+#primarynav ul ul a {
+	width: auto;
+}
+
+#primarynav ul li ul li {
+	font-family: Arial,Helvetica,sans-serif;
+}
+
+#primarynav ul ul li {
+	padding-right: 0;
+}
+
+#primarynav ul li ul li a:hover,
+#primarynav ul li ul li a:active {
+	background: #fff;
+}
+
+#primarynav ul ul.left li {
+	padding-left: 0;
+}
+
+#primarynav li ul li.submenu {
+    background: url("../images/caret_rt.gif") no-repeat scroll 96% 5px #eee;
+}
+
+#primarynav li ul.left li.submenu {
+    background: url("../images/caret_lt.gif") no-repeat scroll 4% 5px #eee;
+}
+
+#primarynav li ul.left li a {
+    padding: 2px 10px 2px 20px;
+}
+
+#primarynav li ul.left li ul li a {
+    padding: 2px 10px 2px 10px;
+}
+
+#primarynav li ul li.submenu a:hover {
+    background: url("../images/caret_rt.gif") no-repeat scroll 96% 5px #fff;
+}
+
+#primarynav li ul li.submenu ul li a:hover {
+    background: #fff;
+}
+
+#primarynav li ul.left li.submenu a:hover {
+    background: url("../images/caret_lt.gif") no-repeat scroll 4% 5px #fff;
+}
+
+#primarynav ul ul {
+    border-top: 1px solid #999;
+	border-bottom: 2px solid #999;
+	font-size: 12px;
+	background-color: #eee;
+}
+
+#primarynav ul ul ul {
+    border-top: 1px solid #999;
+}
+
+#primarynav li ul.left li.submenu ul li a:hover {
+    background: #fff;
+}
+
+/*** End primary navigation ***/
+
+/*= End header banner
+---------------------------------------*/
+
+/*= Begin Sidenav
+---------------------------------------*/
+
+#sidenav {
+	float: left;
+	margin-left: 0;
+	padding-right: 0;
+	width: 170px;
+}
+
+#sidenav dl {
+	margin: 0 0 20px 0;
+	padding: 10px 0 15px 0;
+}
+
+#sidenav dl dt:first-child {
+	font-size: 18px;
+	color: #023d69;
+}
+
+#sidenav dl dt:last-child {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+
+#sidenav dl dt {
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+
+#sidenav dl dt:nth-of-type(2) {
+	margin: 5px 0 0 20px;
+}
+
+#sidenav dl dd {
+	margin: 0 0 0 20px;
+	padding: 0;
+}
+
+#sidenav ul {
+    width: auto;
+	background-color: inherit;
+    margin: 0 0 20px 0;
+}
+
+#sidenav ul#appSwitchMenu {
+	margin: 0 0 50px 0;
+}
+
+#sidenav ul li {
+	color: #555;
+}
+
+#sidenav ul li h2 {
+	background: url("../images/bg_subnav.gif") bottom right #f3ede0;
+    color: #023d69;
+	font-size: 18px;
+	font-weight: normal;
+    padding: 10px 0 15px 20px;
+	
+}
+
+#sidenav ul .disabled > a {
+    color: #023d69;
+}
+
+#sidenav ul ul {
+    margin: 10px 0 0 0;
+	padding: 0;
+}
+
+#sidenav ul ul li {
+    background-color: #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+#sidenav ul ul li a {
+    background-color: inherit;
+    padding: 5px 0 5px 20px;
+	color: #555;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+#sidenav ul ul li a:hover {
+	color: #023D69;
+	text-decoration:underline;
+	background-color: rgba(117,84,38,0.2)
+}
+
+#sidenav li.active a {
+	color: #023D69;
+    font-weight: bold;
+}
+
+#sidenav li.active li a {
+	color: #555;
+    font-weight: normal;
+}
+
+#sidenav li.active li.active a {
+	color: #59798F;
+    font-weight: bold;
+}
+
+/* Third level */
+
+#sidenav ul ul ul {
+	margin: 0 0 0 40px;
+}
+
+#sidenav ul ul ul li {
+    background-color: #fff;
+	list-style: circle;
+}
+
+#sidenav ul ul ul li a {
+    background-color: #fff;
+	padding: 5px 0 5px 0;
+}
+
+#sidenav ul ul ul li a:hover {
+    color: #555;
+	background: none;
+}
+
+/* sidenav tout */
+
+#sidenav .tout-plain {
+	text-align: center;
+	margin: 0 0 20px 20px;
+}
+
+#sidenav .tout-plain:first-of-type {
+	margin: 0 0 40px 20px;
+}
+
+#sidenav .tout {
+	background: rgba(117, 84, 38, 0.1); /* Bark (brown) #755426; */
+	margin: 0 0 20px 20px;
+	padding: 5px 15px 20px 15px;
+	border-top: 5px #6693bc solid;
+	border-bottom: 1px rgba(117, 84, 38, 0.2) solid; /* Bark (brown) #755426; */
+	text-align: center;
+}
+
+#sidenav .tout h3  {
+	 font-size: 17px;
+	 font-style: normal;
+	 margin: 5px 0 10px;
+	 border-bottom: none;
+	 color: #023D69;
+}
+
+#sidenav .tout p  {
+	font-size: 13px;
+	line-height: 18px;
+	margin: 5px 0 0 0;
+}
+
+#sidenav .tout p a  {
+	color: #023d69;
+	text-decoration: underline;
+}
+
+#sidenav .tout p a:hover  {
+	color: #59798f;
+	text-decoration: none;
+}
+
+/*= End Sidenav
+---------------------------------------*/
+
+/* #content */
+
+#content {
+}
+
+p.first {
+	margin-top: 20px;
+}
+
+#content img {
+    float: none;
+    margin: 0;
+}
+
+.app #content a, /* Content section link color */
+.app-attract #content a {
+    color: #023d69;
+}
+
+.app #content a:hover, /* Content section link color */
+.app-attract #content a:hover {
+    text-decoration: none;
+	color: #59798f;
+}
+
+.four-col {
+    margin: 0;
+	float: none;
+}
+
+/*** Begin Homepage 4 tout row ***/
+
+#content .one-col {
+	margin-bottom: 0;
+}
+
+#content .one-col .tout {
+	text-align: center;
+	padding: 10px 10px 20px 10px;
+	text-align:center;
+	margin: 0 0 0 0;
+	background:none;
+	border-radius:2px;
+    -webkit-transition:all 0.3s ease-in-out;
+    -moz-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+
+#content .one-col .tout:hover{
+	border-radius:2px;
+	background-color: #F7F7F7;
+	box-shadow:0 0 8px #ddd;
+}
+
+#content .one-col .tout img {
+	float: none;
+	margin: 0;
+}
+
+.app #content h3 a, 
+.app-wide #content h3 a {
+    color: #023D69;
+    text-decoration: underline;
+}
+
+#content .one-col .tout h3 {
+	border-bottom: none;
+	font-size: 17px;
+	font-style: normal;
+	font-weight: normal;
+	margin: 10px 0 10px;
+	border-bottom: none;
+	color: #023D69;
+}
+
+#content .one-col .tout p {
+	font-size: 13px;
+	margin: 0;
+}
+
+/*** End Homepage tout row ***/
+
+/*** Begin homepage 2 tout row ***/
+
+.audience {
+	background: none repeat scroll 0 0 #F7F7F7;
+    box-shadow: 0 0 4px #D5D5D5 inset;
+    padding: 10px;
+}
+
+#content .audience .two-col {
+    width: 370px;
+	margin-bottom: 0;
+}
+
+#content .two-col .tout:after {
+	clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+#content .two-col .tout {
+	margin-bottom: 0px;
+	padding: 10px 10px 0 10px;
+	border-radius:2px;
+	box-shadow:0 0 8px #ddd;
+	background:#fcfcfc;
+    -webkit-transition:box-shadow 0.2s ease-in-out;
+    -moz-transition:box-shadow 0.2s ease-in-out;
+    -o-transition:box-shadow 0.2s ease-in-out;
+    transition:box-shadow 0.2s ease-in-out;
+}
+
+#content .two-col .headline  {
+	border-bottom: 1px solid #ccc;
+    display: block;
+    margin: 0 0 10px 0;
+}
+
+/* .two-col-centent */
+#content .two-col .two-col-content  {
+	float: right;
+	width: 247px;
+	height: 140px;
+	padding: 0 5px 0 0;
+}
+
+.audience-content {
+	height: 100px;
+	overflow-y:auto;
+}
+
+#content .two-col .tout .two-col-content .caret {
+	border-left:  4px solid #6693bc; /* Controls the color of the caret */
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-top: 4px solid rgba(0, 0, 0, 0);
+	border-bottom: 4px solid rgba(0, 0, 0, 0);
+	margin: 3px 0 0 0;
+}
+
+#content .two-col .tout .two-col-content p {
+	font-size: 13px;
+	margin-left: 0;
+	margin: 0 0 5px 0;
+}
+
+#content .two-col .tout .two-col-content p.audience-link {
+	font-size: 12px;
+	color: #555;
+	margin: 10px 0 0 0;
+}
+
+#content .two-col .tout .two-col-content ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 100px;
+	overflow-y:auto;
+}
+
+#content .two-col .tout .two-col-content ul li {
+	margin: 0 0 5px 0;
+	padding: 0;
+	font-size: 12px;
+	list-style: none;
+	color: #555;
+}
+
+#content .two-col .tout .two-col-content ul li a {
+}
+
+#content .two-col h3 {
+    color: #555;
+    font-size: 17px;
+    font-style: normal;
+	font-weight: normal;
+	display: inline-block;
+	padding-right: 10px;
+	margin: 0 0 -1px;
+	border-bottom: 2px solid #af1732;
+}
+
+#content .two-col .tout img {
+	float: left;
+	margin: 0;
+}
+
+/*** End homepage 2 tout row ***/
+
+/*** Begin tables ***/
+
+/* datagrid */
+.home .scroll-rgn { /* home page "Pending Quick View" */
+	border: none;
+	height: 300px;
+	overflow-y: auto; /* Set to auto so scroll bar shows only when needed */
+}
+
+.home table.datagrid {
+    font-size: 12px;
+	border: 1px #ddd solid;
+	margin-bottom: 0;
+}
+
+.two-col .scroll-rgn .datagrid {
+    width: 100%;
+}
+
+.home .datagrid tr {
+    border-bottom: 1px #ddd solid;
+}
+
+.home .datagrid th.first, .datagrid td.first {
+    padding-left: 5px;
+}
+
+.home .datagrid th, .datagrid td {
+    padding: 5px;
+}
+
+.home .datagrid th {
+    border-bottom: none;
+    border-left: none;
+    border-top: none;
+	background: #d6ebf9;
+}
+
+.home .datagrid td {
+    border-left: none;
+	background: #eee;
+}
+
+.home td.row-total { /* Last row in a table */
+    border-top: none;
+	border-bottom: none;
+	background: #D6EBF9;
+}
+
+/* Simple table */
+
+.app #content h2.simple-header {
+	font-size: 14px;
+	background: #023D69;
+	color: #fff;
+	border-bottom: none;
+	margin: 0;
+	padding: 5px;
+}
+
+.home .simple {
+    background-color: #eee;
+	border: 1px solid #ddd;
+	font-size: 12px;
+}
+
+.home .app #content h2.simple-header {
+    border-bottom: none;
+}
+
+.home h2.simple-header a, 
+.app #content h2.simple-header a {
+	color: #fff;
+}
+
+.home .simple th {
+    background-color: #d6ebf9;
+	border-bottom: 1px solid #ddd;
+	text-align: right;
+	padding: 5px;
+}
+
+.home .simple td {
+    border-bottom: 1px solid #ddd;
+	padding: 5px;
+}
+
+/*** End tables ***/
+
+/*** Begin faux footer ***/
+
+#content .footer-faux {
+	margin: 10px 0 0 0;
+	padding: 20px 0 20px 0;
+	border-top: 1px solid #CCCCCC;
+	background:url("../images/bg_footerfaux.gif") right bottom no-repeat;
+}
+
+#content .footer-faux h3 {
+    margin: 0 0 15px 0;
+	color: #555;
+    font-size: 17px;
+    font-style: normal;
+	font-weight: normal;
+	border-bottom: none;
+}
+
+#content .footer-faux ul {
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: 12px;
+}
+
+#content .footer-faux ul li:first-child {
+	margin: 0 0 7px 0;
+}
+
+#content .footer-faux ul li {
+    color: #555;
+	margin: 7px 0;
+	padding: 0;
+}
+
+#content .footer-faux ul li a, 
+#content .footer-faux ul li a:visited,
+#content .footer-faux ul li a:active {
+    color: #555;
+	text-decoration: none;
+}
+
+#content .footer-faux ul li a:hover {
+    color: #555;
+	text-decoration: underline;
+}
+
+#content .footer-faux p {
+    color: #555;
+	font-size: 12px;
+	line-height: 21px;
+}
+
+/*** End faux footer ***/
+
+/*** Begin footer ***/
+
+body.app #footer, body.app-wide #footer {
+    margin: 0 20px 10px 20px;
+}
+
+/*** End footer ***/

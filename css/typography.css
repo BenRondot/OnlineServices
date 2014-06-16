@@ -1,0 +1,290 @@
+/* CSS Document typography.css */
+/* 2007.10.16-01 */
+/* Set our base font, text sizing and color. */
+#sidenav, #banner, #footer {
+	font-size:13px;
+}
+body {
+	background-color: #fff;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+table {
+	font-size: small;
+	border-collapse: collapse;
+}
+input, select {
+	font-size: 75%;
+}
+/* use smaller text on a multi-topic page (still experimental) 11-06 EB */
+#content .multi-topic { 
+	font-size: 90%;
+}
+#content .multi-topic table {
+	font-size: 85%;
+}
+/* Section Title (floats to right) - display only in print view - 12/7 icm */
+#content p.section {
+	display: none;
+}
+
+/* General
+   ========================================= */
+.underline {
+	text-decoration: underline;
+}
+   
+/* Paragraphs 
+   ========================================= */
+p, table p {
+	margin: 0;
+	padding: 0;
+	font-size: 1em;
+}
+.attract p, .app p, .app-wide p, .popup p, .app-attract p {
+	margin-bottom: 1em;
+}
+.instruct {
+	margin: .5em 0;
+}
+#content.coBrand .instruct {
+	margin-right: 165px;
+}
+
+.note {
+	font-size: 90%;
+	font-style: italic;
+	width: auto;
+	margin: .5em 0;
+}
+#content.coBrand .note {
+	margin-right: 165px;
+}
+
+.s-note {
+	font-size: .9em;
+	font-style: italic;
+	width: auto;
+	height: 100%;
+	padding: 0.75em;
+	background: #FFFCCF url(../images/fill_colors/fill_gradient_five.jpg) bottom repeat-x;
+	border: 1px solid #F4E287;
+}
+
+#content.coBrand .s-note {
+	margin-right: 165px;
+}
+
+.l-note {
+	font-size: 90%;
+	font-weight: bold;
+	font-style: italic;
+	width: auto;
+	margin: .5em 0;
+}
+#content.coBrand .l-note {
+	margin-right: 165px;
+}
+
+.panel p {
+	padding: 1em 1em 0 1.25em;
+}
+.panel .last {
+	padding-bottom: 1em;
+}
+.panel .note {
+	/* don't combine, want to inherit bottom padding from either p or .last */
+	padding-top: 0;
+	padding-left: 2em;
+	padding-right: 2em;
+}
+.bottom-link {
+	text-align: right;
+	margin: 1em 0;
+}
+.attract .simple-text p, .app .simple-text p,
+.app-attract .simple-text p {
+	margin: 0;
+}
+.name {
+	font-weight: bold;
+	font-style: italic;
+}
+/* for registered trademark */
+.reg {
+	font-size: 85%;
+	vertical-align: super;
+}
+#content sup {
+	font-size: 90%;
+	vertical-align: super;
+}
+.app #content p sup, .attract #content p sup,
+.app-attract #content p sup {
+	font-size: 70%;
+	vertical-align: super;
+}
+#content h1 sup {
+	font-size: 50%;
+	vertical-align: super;
+}
+.readme p span {
+	font-style: normal;
+	font-weight: bold;
+	color: #A14A3E;	
+}
+.readme {
+	border: 1px solid #A14A3E;
+	margin: 0 0 .5em 0; 
+	font-weight: bold;
+	padding: .25em .25em 0 .25em;
+	display: block;
+}
+.readme .underline {
+	color: #000000;	
+}
+
+
+/* Headlines
+   ========================================= */
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	color: #023D69;
+}
+h2 {
+	font-size: 100%;
+}
+h3 {
+	font-size: 100%;
+	font-weight: normal;
+	font-style: italic;
+	color: #AF1732;
+}
+#sidenav h2 {
+	color: #FFF;
+	background-color: #59798F;
+	padding: 0.25em;
+	padding-left: .5em;
+}
+#sidenav .login h2 {
+	padding: .5em;
+	background: none;
+}
+.app #sidenav .search label,
+.attract #sidenav .search label  {
+	font-size: 85%;
+}	
+#content h1 {
+	font-size: 200%;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	border-bottom: 1px solid #000;
+	font-weight: normal;
+}
+#content .multi-topic h1 {
+	font-size: 100%;
+	font-style: normal;
+	font-family: Arial, Helvetica, sans-serif;
+	border: none;
+	margin-bottom: -5px;
+	padding: 0.15em 0.5em 0.15em 0.5em;
+	font-weight: bold;
+	background-color: #023D69;
+	color: #FFF;
+}
+#content h1 span, #content h2 span, #content h3 span {
+	font-size: 70%;
+	font-weight: normal;
+	font-style: normal;
+	display: block;
+	color: #000;
+}
+#content h2 span, #content h3 span {
+	float: right;
+}
+#content h2 span a, #content h3 span a {
+	color: #369;
+}
+.app #content h1, .app-wide #content h1, .attract #content h1,
+.app-attract #content h1 {
+	margin-bottom: .5em;	
+}
+.app #content h1.no-space, .app-wide #content h1.no-space, .attract #content h1.no-space,
+.app-attract #content h1.no-space {
+	margin-bottom: 0;	
+}
+.app #content h1, .app-wide #content h1, .app #content h2, .app-wide #content h2,
+.app #content h3, .app-wide #content h3 {
+	border-bottom: 1px solid #000;
+}
+.attract #content h2.border, .attract #content h3.border {
+	border-bottom: 1px solid #000;
+}
+.app #content h2.no-border, .app-wide #content h2.no-border, 
+.app #content h3.no-border, .app-wide #content h3.no-border
+ {
+	border: none;
+	padding-bottom: 1px;
+}
+#content .login h3 {
+	text-align: left;
+	background-color: #023D69;
+	color: #FFF;
+	font-weight: bold;
+	font-style: normal;
+	padding: .25em;
+}
+.family h2 {
+	color: #fff;
+	background-color: #023D69;
+}
+.app #content h2 a, .app-wide #content h2 a {
+	color: #023D69;
+	text-decoration: none;
+}
+.app #content h3 a, .app-wide #content h3 a {
+	color: #AF1732;
+	text-decoration: none;
+}
+.promo-nar h4 {
+	font-size:small;
+}
+
+/* Errors & Required
+   ========================================= */
+.required {
+	color: #AF1732;
+	padding: 0 .5em;
+}
+div.required {
+	float: right;
+	width: auto;
+	padding: 0;
+}
+.error {
+	font-weight: normal;
+	color: #AF1732;
+	font-size: 90%;
+}
+li .error {
+	margin: 0 0 .5em 0;
+	font-size: 100%;
+	font-weight: bold;
+}
+#content.coBrand li .error {
+	display: block;
+	margin-right: 165px;
+}
+
+li .message {
+	margin: 0 0 .5em 0;
+	font-size: 100%;
+	font-weight: bold;
+	color: #005032;
+}
+#content.coBrand li .message {
+	display: block;
+	margin-right: 165px;
+}

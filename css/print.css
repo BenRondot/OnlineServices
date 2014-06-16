@@ -1,0 +1,210 @@
+/* CSS Document print.css */
+/* 2008.02.01-01 */
+@media print {
+	body {
+		font-size: 7.4pt;
+	}
+	table {
+		/* 90% seems to get similar printed layout to 1024x768 screen */
+		font-size: 7.4pt;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		color: #000;
+		page-break-after: avoid; 
+	}
+	#banner {
+		background-color: #FFF;
+	}
+	#globalnav {
+		width: 100%;
+		height: 10px;
+		line-height: 10px;		
+	}
+	#primarynav {
+		height: 10px;
+		padding: 0;
+		margin-bottom: 0;
+	}	
+	#globalnav div, #globalnav ul, #primarynav ul {
+		display: none;
+	}
+	#identity {
+		border: 1px solid #000;
+		border-width: 1px 0;
+		position: relative;
+		line-height: 80px;
+		height: 80px;
+	}
+	#identity img {
+		position: absolute;
+		top: 21px;
+		left: 184px;
+	}
+	.app #identity img, .app-wide #identity img {
+		left: auto;
+		right: 65px;
+	}
+	/* Now use a more specific rule to get the logo positioned. */
+	#identity .logo img, body.app #identity .logo img, body.app-wide #identity .logo img {
+		top: -13px;
+	}
+	#identity img.screen {
+		display: none;
+	}
+	#identity img.print {
+		display: inline;
+	}
+	#sidenav {
+		display: none;
+	}
+	body.attract #wrapper {
+		width: 100%;
+	}
+	#wrapper, .app #wrapper {
+		padding: 0;
+		margin: 0;
+	}
+	#container, .app #container, body.app-wide #container  {
+		padding: 0;
+		margin: 0;
+	}
+	#content, .app #content {
+		padding: 0;
+		margin: 0;
+		float: none;
+		width: 100%;
+	}
+	#content p.section {
+		color: #000;
+		text-align: right; 
+		margin: 0; 
+		width: auto;
+		display: block;
+	}
+	div.required {
+		margin-bottom: .5em;
+	}
+	.tasknav {
+		display: inline;
+	}
+	.panel ul.dash-list, .panel .dash-list li, .panel, .record-id, .record-simple, .simple {
+		background-color: #FFF;
+	}
+	.record-id td {
+		border-bottom: 1px solid #CCC;
+	}
+	body.attract #footer, body.app #footer, body.app-wide #footer, #footer {
+		width: 100%;
+		padding: 0;
+		margin: 10px 0;
+	}
+	#wordmark {
+		width: 100%;
+	}
+	#disclosures {
+		width: 100%;
+	}
+	body.attract #disclosures {
+		width: 100%;
+	}
+	.datagrid .odd {
+		background-color: #EAEAEA;
+		border-top: 1px solid #DDD;
+		border-bottom: 1px solid #DDD;
+	}
+	.record-id, .record-simple {
+		background-color: #DFDFDF;
+		border: 2px solid #555;
+	}
+	.record-id td, .record-simple td {
+		border: none;
+      padding: .1em .5em; 
+	}
+	.datagrid th {
+		border-color: #666;
+		color: #666;
+	}
+	.datagrid td {
+		border-left-color: #666;
+	}
+	.row-sub-total td, td.row-sub-total {
+		background-color: #eee;
+	}
+	.row-total td, td.row-total {
+		background-color: #aaa;
+	}
+	.row-grand-total td, td.row-grand-total {
+		background-color: #000;
+		color: #fff;
+	}
+	.app #content .row-grand-total td.col-h1 h1,
+	.app-wide #content .row-grand-total td.col-h1 h1 {
+		color: #fff;
+	}
+	.app #content .cmpddatagrid  h2, .app-wide #content .cmpddatagrid h2 {
+		padding-top:1em;
+	}
+	.tasknav {
+		display: none;
+	}
+	.questions {
+		width: 100%;
+	}
+	.app #content label.timestamp, .attract #content label.timestamp 
+	{
+		display: inline;
+		float: right;
+		background-color: #FFF;
+		margin: 0;
+	}
+	#footer img.screen
+	{
+		display: none;
+	}
+	#footer img.print
+	{
+		height: 25px;
+		width: 336px;	
+		display: inline;
+	}
+}
+/* Possible additions
+.rows, .paging  {
+	display: none;
+}
+Display One America Family Companies at bottom of printed pages
+.family {
+	border: 1px dashed black;
+	visibility: visible;
+	display: block;
+	width: 200%;
+	height: auto;
+	padding-bottom: 1.5em;
+	background-color: transparent;
+	left: 0;
+	top: 175%;
+	margin-top: 1em;
+	border: none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-style: normal;
+	font-size: 80%;
+}
+.family h2 {
+	background-color: transparent;
+	color: #000;
+	text-decoration: underline;
+}
+.family ul {
+	padding: 0;
+	margin: 0;
+}
+.family li {
+	display: inline;
+	margin: 0;
+	padding: .2em .5em;
+	white-space: nowrap;
+}
+.family li a {
+	text-decoration: none;
+}
+ */ 

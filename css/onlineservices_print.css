@@ -1,0 +1,20 @@
+/****************************************************************************************
+Copyright (c) 2013 OneAmerica
+
+AUTHOR Ben Rondot
+
+DATE		NAME		DESCRIPTON
+
+04/22/2014	Ben Rondot	Initial creation.
+
+****************************************************************************************/
+@media print {
+	
+#identity .logo img, 
+body.app #identity .logo img {
+	left: 40px;
+	position: absolute;
+	top: 0px;
+}
+
+}

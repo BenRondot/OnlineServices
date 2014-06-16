@@ -1,0 +1,1407 @@
+/* CSS Document layout.css */
+/* 2008.02.01-01 */
+/* Set our base margins and padding. */
+html, body, table, div, form, input, select {
+	margin: 0;
+	padding: 0;
+}
+table {
+	width: 100%;
+	border: none;
+}
+a img {
+	border: none;
+}
+
+/* MISC
+======================================== */
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.hide, .hide#sidenav {
+	display: none;
+}
+
+/* BANNER
+======================================== */
+#banner {
+	background-color: #023D69;
+	color: #FFF;
+	margin: 10px 0;
+	
+	height: 97px;
+	overflow: visible;
+	margin-bottom: 25px;	
+}
+* html #banner {
+	overflow: hidden;
+	height: 97px;
+	margin-bottom: 25px;
+}
+.app #banner #coBrand {
+	height: 1px;
+	width: 152px;
+	float: right;
+}
+.app #banner #coBrand img.coBrand {
+	width: 100px;
+	height: 65px;
+	position: relative;
+	overflow: visible;
+	float: right;
+	top: -4px;
+	right: 52px;
+}
+
+#globalnav {
+	position: relative;
+	width: 730px;
+}
+body.app #globalnav, body.app #primarynav,
+body.app-wide #globalnav, body.app-wide #primarynav,
+body.app-attract #globalnav {
+	width: auto;
+}
+body.app #globalnav, body.app-wide #globalnav,
+body.app-attract #globalnav {
+	margin-right: 65px;
+}
+#globalnav {
+	text-align: right;
+	height: 30px;
+	line-height: 30px;
+	position:relative;
+	z-index:3;
+}
+#globalnav div {
+	float: right;
+	line-height: 30px;
+}
+/* This is for the text input, submit gets styles in lists_nav */
+#globalnav input {
+	margin: 5px 0 0 10px;
+	border: 1px solid #999;
+}
+#identity {
+	border: solid #FFF;
+	border-width: 1px 0;
+	height: 40px;
+	vertical-align: middle;
+	line-height: 40px;
+	position: relative;
+	z-index:2;
+}
+/* The next two are used to get the identity images positioned. */
+#identity img {
+	position: absolute;
+	top: 1px;
+	left: 184px;
+}
+body.app #identity img, body.app-wide #identity img,
+body.app-attract #identity img {
+	left: auto;
+	right: 65px;
+}
+/* Now use a more specific rule to get the logo positioned. */
+#identity .logo img, body.app #identity .logo img, body.app-wide #identity .logo img,
+body.app-attract #identity .logo img 
+{
+	position: absolute;
+	top: -36px;
+	left: 60px;
+}
+#identity img.print,
+body.popup #identity .logo img.print {
+	display: none;
+}
+body.popup #banner {
+	margin: 3px 0;
+	height: auto;  /* no need for 97px banner on popups */
+}
+/* Turn off all identity images in popups. */
+body.popup #primarynav, body.popup #identity img,
+body.popup #globalnav, body.popup #footer {
+	display: none;
+}
+body.popup #banner { 
+	background-color: transparent;
+}
+body.popup #identity {
+	border: none;
+	height: 5px;
+}
+/* Now turn on and position the print version of the logo. */
+body.popup #identity .logo img {
+	left: 10px;
+	top: 5px;
+	display: inline;
+}
+
+
+/* PRIMARY NAVIGATION AND DROP-DOWN MENUS
+======================================== */
+#primarynav {
+	/* primary nav containing div */
+	height: 19px;
+	padding: 4px 10px 2px 175px;
+	margin-bottom: 10px;
+	position:relative;
+	z-index:1;
+}
+
+/* SIDENAV
+======================================== */
+#sidenav ul {
+	padding: 0;
+	margin: 0 0 1em 0;
+	background-color: #EADBB6;
+	width: 145px;
+}
+#sidenav {
+	float: right;
+	/* 
+	 *  containing width of #sidenav is 155px (10px padding + 145px)
+	 *  we pull ourselves into #container's left padding to keep from
+	 *  bumping into #content
+	*/
+	margin-left: -155px;
+	padding-right: 10px;
+	width: 145px;
+}
+#sidenav .login {
+	position: relative;
+	height: 30px;
+	width: 145px;
+	background: #AF1732;
+}
+#sidenav .login input {
+	float: right;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	/* this fixes a width problem in ie7 where inputs can span 
+	* width of content
+	*/
+	margin-left: 155px;	
+}
+#sidenav .float {
+	width: 145px;
+	margin-bottom: 10px;
+	position: relative;
+}
+#sidenav .float input {
+	float: right;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	/* this fixes a width problem in ie7 where inputs can span 
+	* width of content
+	*/
+	margin-left: 155px;		
+}
+body.app-wide #sidenav, body.popup #sidenav {
+	display: none;
+}
+#content .login .b-promo {
+	position: relative;
+	left: 106px;
+}
+
+/*  SIDENAV SEARCH
+======================================== */
+.app #sidenav .search, 
+.attract #sidenav .search,
+.app-attract #sidenav .search 
+{
+	background-color: #F2E9D3;
+	padding-bottom: 2px;
+	padding-left: 2px;
+	margin-left: -2px; 
+	margin-bottom: 1em;
+}
+.app #sidenav .search a,  
+.attract #sidenav .search a,
+.app-attract #sidenav .search a
+{
+	color: #00F;
+	text-decoration: underline;
+	font-size: 85%;
+}
+.app #sidenav .search input,  
+.attract #sidenav .search input,
+.app-attract #sidenav .search input
+{
+	margin-top: 2px; 
+}			
+.app #sidenav .search select, 
+.attract #sidenav .search select,
+.app-attract #sidenav .search select
+{
+	margin-top: 2px; 
+}			
+.app #sidenav .timestamp, .attract #sidenav .timestamp,
+.app-attract #sidenav .timestamp
+{
+	background-color: #F2E9D3;
+	background-image: url(../images/accents/time_background.jpg);
+	height: 30px;
+	padding:  8px 2px 2px 2px;
+	margin-bottom: 1em;
+	text-align: center;
+	font-size: 85%;
+}
+.app #content label.timestamp, .attract #content label.timestamp,
+.app-attract #content label.timestamp 
+{
+	display: none;
+}
+
+/* WRAPPER
+======================================== */
+#wrapper {
+	width: 100%;
+}
+body.attract #wrapper {
+	width: 750px;
+}
+
+/* CONTENT
+======================================== */
+#content {
+	/* making this relative caused sidenav links in Firefox not to work */
+	float: right;
+	width: 100%;
+}
+#container {
+	/* left padding is to accomodate 20px whitespace + 155px sidenav */
+	padding: 0 20px 0 175px;
+	height: 1%;
+}
+body.attract #container {
+	padding-right: 0;
+}
+body.app-wide #container {
+	padding: 0 20px;
+}
+body.popup #container {
+	padding: 0 10px 0 130px;
+}
+#content img {
+	float: right;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+#content #backlight_template .bl_tmp_playlist img { 
+        margin-left: 0; 
+} 
+#content .ctr img
+{
+	float: none;
+	display: block;
+	text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .lft img
+{
+	float: none;
+	display: block;
+	text-align: left;
+    margin-left: 0;
+}
+.panel {
+	background-color: #F2E9D3;
+	padding: 0;
+	height: 1%;
+	margin-bottom: 15px;
+}
+.panel div {
+	padding: 10px 15px;
+	border-bottom: 1px solid #FFF;
+}
+.panel .simple {
+	margin-bottom: 0;
+}
+.set-width {
+	width: 10em;
+}
+.tasknav {
+	text-align: left;
+	margin: 10px 0;
+	width: auto;
+}
+
+/* COLUMNS
+======================================== */
+.four-col {
+	width: 770px;
+	padding: 0;
+	margin: 0 10px 10px 0;
+	float: left;
+}
+.three-col {
+	width: 575px;
+	padding: 0;
+	margin: 0 10px 10px 0;
+	float: left;
+}
+.two-col {
+	float: left;
+	width: 380px;
+	padding: 0;
+	margin: 0 10px 10px 0;
+}
+.one-col {
+	float: left;
+	width: 185px;
+	padding: 0;
+	margin: 0 10px 10px 0;
+}
+.last-col {
+	margin-right: 0;
+}
+.bottom-col {
+	margin-bottom: 0;
+}
+.promo-three {
+	height: 130px;
+	position: relative;
+	vertical-align: middle;
+	background-color: #F2E9D3;
+}
+.promo-one {
+	height: 230px;
+	position: relative;
+	vertical-align: middle;
+}
+/* We need to override this rule #content img */
+#content .promo-three img, #content .promo-one img {
+	margin: 0;
+}
+/* This image option is for PinPoint Agent Development */	
+.app #content .one-col .promo-four {
+	background-image: url(../images/fill_colors/pannel_back.jpg);
+	background-repeat: no-repeat;
+}
+.promo-four p {
+	padding: 1em 1em 0 1.25em;
+}
+.app #content .one-col .promo-four h3 {
+	color: #AF1732;
+	font-weight: bold;
+	font-style: italic;
+	font-size: 0.9em;
+	margin-right: 0;
+	margin-left: 1.25em;
+	padding: 0.5em 0.25em 0 0;
+	border-bottom: 1px dotted #000;
+}
+.app #content .four-col .one-col .promo-four img {
+	float: right;
+	margin: 0 0 0 10px;
+}
+.promo-nar {
+	padding: 5px;
+	position: relative;
+	background-color: #F2E9D3;
+	overflow: hidden;
+}
+.promo-nar img {
+	float: right;
+	margin: 5px -5px 5px 5px;
+}
+.promo-three input.b-promo, .promo-one input.b-promo, .promo-nar input.b-promo {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	/* this fixes a width problem in ie7 where inputs can span 
+	* width of content
+	*/	
+	margin-left: 600px;
+}
+
+.h-sep {
+	clear: both;
+	border-top: 1px solid #000;
+	margin-bottom: 10px;
+}
+/* override specific width with an inline style */
+.align {
+	text-align: right;
+	padding-right: 5px;
+	float: left;
+	width: 10em;
+}
+
+/* VIDEO LINK AND PRESENTATION 
+======================================== */
+ #videolink ul {
+	margin: 0;
+	padding: 0;
+	list-style-image: none;
+	list-style-type: none;
+}
+#videolink li {
+	position: relative;
+	float: left;
+	clear: both;
+	background-color: #EADBB6;
+	list-style:none;
+	padding: 0;
+}
+#videolink li a {
+	display: block;
+	text-decoration: none;
+	background-color: transparent;
+	width: 555px;
+	margin: 0px;
+	padding: 0px;
+	height: 75px;
+	list-style-image: none;
+	list-style-type: none;
+}
+.attract #wrapper #container #content #videolink a:visited {
+	background-color: #EADBB6;
+	display: block;
+	text-decoration: none;
+	padding: 10px;
+	margin-right: -5px;
+	margin-left: -5px;
+	width: 555px;
+}
+.attract #wrapper #container #content #videolink a:hover {
+	background-color: #F4E5BF;
+	display: block;
+	text-decoration: none;
+	height: 75px;
+	padding: 10px;
+	margin-right: -5px;
+	margin-left: -5px;
+	width: 555px;
+}
+.attract #wrapper #container #content #videolink a:active {
+	background-color: #EADBB6;
+	display: block;
+	text-decoration: none;
+	margin: 0px 5px 0px -5px;
+	padding: 10px;
+	width: 555px;
+}
+.attract #wrapper #container #content #videolink img {
+	float: left;
+	margin-left: 0px;
+	padding: 0;
+}
+.attract #wrapper #container #content #videolink .b-promo {
+	bottom: 5px;
+	right: 5px;
+	position: absolute;
+	float: right;
+}
+.attract #wrapper #container #content #videolink h2 {
+	margin-left: 95px;
+}
+.attract #wrapper #container #content #videolink p {
+	margin-bottom: 0px;
+	margin-left: 95px;
+	font-size: 1em;
+	color: #000000;
+	text-decoration: none;
+}
+.attract #wrapper #container #content #videolink a {
+	background-color: #EADBB6;
+	display: block;
+	text-decoration: none;
+	padding: 10px;
+	margin-right: -5px;
+	margin-left: -5px;
+	width: 555px;
+}
+.presentation-panel-in {
+	background-image: url(../images/fill_colors/presentation-in-000.png);
+	background-repeat: repeat-x;
+	display: block;
+	height: 10px;
+}
+.presentation-panel {
+	background-color: #000;
+	display: block;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+.presentation-panel-out {
+	background-image: url(../images/fill_colors/presentation-out-000.png);
+	background-repeat: repeat-x;
+	display: block;
+	height: 10px;
+}
+.attract #wrapper #container #content .presentation-panel p {
+	font-size: 1em;
+	color: #FFF;
+}
+.attract #wrapper #container #content .presentation-panel a {
+	text-decoration: none;
+	height: 10px;
+	color: #FFF;
+	margin: 0 5px 0px 5px;
+	padding: 2px 5px 2px 5px;
+}
+.attract #wrapper #container #content .presentation-panel a:visited {
+	text-decoration: none;
+
+}
+.attract #wrapper #container #content .presentation-panel a:hover {
+	text-decoration: none;
+	background-color: #666;
+	color: #FFF;
+}
+.attract #wrapper #container #content .presentation-panel a.select:hover  {
+	text-decoration: none;
+	background-color: #666;
+	color: #FFF;
+}
+.attract #wrapper #container #content .presentation-panel a:active {
+	text-decoration: none;
+	background-color: #666;
+}
+.attract #wrapper #container #content .presentation-panel p a.select {
+	color: #666;
+}
+
+/* ROTATING PROMO
+======================================== */
+.promo-one-slideshow {
+	height: 270px;
+	position: relative;
+	vertical-align: middle;
+}
+
+#content .promo-one-slideshow img {
+	margin: 0;
+}
+
+.promo-content {
+  cursor:pointer;
+	height: 230px;
+	position: relative;
+	vertical-align: middle;
+}
+
+.promo-one-slideshow input.b-promo {
+	bottom:45px;
+	margin-left:600px;
+	position:absolute;
+	right:5px;
+}
+
+#promo-controls {
+  background-image: url(../images/accents/RP1_control_background.jpg);
+	height:40px;
+	clear:both;
+	padding:0px;
+	margin:0px;
+}
+
+.attract #wrapper #container #content .promo-one-slideshow #promo-controls a:focus {
+  outline: 0;
+}
+
+.attract #wrapper #container #content .promo-one-slideshow #promo-controls a img {
+  margin:0px;
+	padding:0px;
+	margin-top:9px;
+	float:none;
+}
+
+.attract #wrapper #container #content .promo-one-slideshow #promo-controls a.play-pause {
+  margin-left:10px;
+}
+
+.attract #wrapper #container #content .promo-one-slideshow #promo-controls a.switch {
+  margin-left:25px;
+}
+
+.loading {
+	background: url(../images/accents/loading.gif) center no-repeat;
+}
+
+.slideshowThumbnail {
+	outline: none;
+}
+
+.outline {
+	border: 1px solid #59798F;
+	z-index: 0;
+	position: absolute;
+}
+
+/* ACCORDION COMPONENT
+======================================== */
+ul#accordion {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+#accordion li {
+	padding:0px;
+	margin:0px;
+}
+#accordion div.collapse {
+	background-color: #F2E9D3;
+	margin:0px;
+	padding:0px 20px 10px 20px;
+}
+#accordion div.collapse div.collapse-container {
+  background-color: #FFFFFF;
+	margin:0px;
+	padding:0px;
+}
+ul#accordion li div.collapse div.collapse-container .datagrid {
+  margin-bottom: 0em;
+}
+.accordion-heading .simple, ul#accordion li div.header .simple {
+	margin-bottom: 0em;
+	margin-top: 1px;
+}
+ul#accordion li div.header .simple td, 
+ul#accordion li div.header .simple-text td, 
+ul#accordion li div.header .record-simple td,
+ul#accordion li div.header .record-id td {
+  border: 0px;
+}
+ul#accordion li div.header .simple tr:hover {
+  cursor: pointer;
+	background-color:#F4E5BF;
+}
+.accordion-heading {
+	float: right;
+	position: relative;
+	background-color: #F2E9D3;
+	padding-top: 4px;
+	margin-top: -4px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.accordion-heading p {
+	margin-bottom: 0em;
+}
+.accordion-heading a#expand-all {
+	color: #000000;
+	text-decoration: none;
+}
+.accordion-heading a#expand-all:hover {
+	color: #AF1732;
+	text-decoration: underline;
+}
+.accordion-heading a#expand-all:link {
+	color: #666666;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	text-decoration: none;
+}
+.accordion-heading#expand-all:hover {
+	color: #AF1732;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	text-decoration: none;
+}
+.accordion-heading a#collapse-all {
+	color: #000000;
+	text-decoration: none;
+}
+.accordion-heading a#collapse-all:hover {
+	color: #AF1732;
+	text-decoration: underline;
+}
+.accordion-heading a#collapse-all:link {
+	color: #666666;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	text-decoration: none;
+}
+.accordion-heading#collapse-all:hover {
+	color: #AF1732;
+	padding-top: 3px;
+	padding-right: 3px;
+	padding-bottom: 3px;
+	padding-left: 3px;
+	text-decoration: none;
+}
+
+/* LOGIN PANEL 
+======================================== */
+#content .login {
+	width: 100%;
+	padding: 10px 0 10px 0;
+	background-color: #FFF;
+	margin: 0;	
+}
+#content .login p {
+	line-height: 1em;
+	padding: 0.25em 1em 0.5em 0;
+	margin-bottom: 0.25em;
+	margin-right: 0;
+	text-align: left;	
+}
+#content .login .label {
+	text-align: right;
+	color: #023D69;
+	font-weight: bold;
+	padding-right: 6px;		
+}
+#content .login .panel p {
+	padding-left: 0.5em;		
+}
+#content .login table {
+	padding: 10px 0 10px 0;
+	background-color: #F2E9D3;
+	margin: 0;	
+}
+#content .login table td {
+	border-bottom: 1px solid #FFF;
+	padding: .25em 0 .25em .5em;	
+}
+
+/* DYNAMIC COLUMN SIZING FOR PROMOS 
+======================================== */
+#content dl.topic-indx
+{
+	width: 185px;
+	margin: 0 10px 10px 0;
+	float: left;
+	clear: none;
+}
+#content dl.topic-indx dt
+{
+	padding:0.25em 0.25em 0.25em 0.5em;
+	font-weight:bold;
+	color:#fff;
+	margin: 0;
+	background-color:#023D69;
+}
+#content dl.topic-indx dd
+{
+	padding: 0;
+	margin: 0;
+	border-bottom:1px solid #fff;
+	background-color:#F2E9D3;
+}
+#content dl.topic-indx a
+{
+	padding:0.25em 0.25em 0.25em 0.5em;
+	margin: 0;
+	display: block;
+	text-decoration: none;
+	color:#000;
+}
+#content dl.topic-indx dt a
+{
+	padding: 0;
+	color:#fff;
+}
+#content dl.topic-indx a:hover {
+	color:#AF1732;
+}
+
+/* GLOSSARY 
+======================================== */
+.glossary {
+	width: 75%;
+	padding: 0;
+	margin: 0;
+}
+.attract #content .glossary {
+	width: 100%;
+}
+.glossary dt  {
+	color: #023D69;
+	font-style: normal;
+	font-weight: bold;
+	padding-top: 1em;
+}
+.app #content .glossary h2 {
+	text-transform: uppercase;
+	border-bottom: none;
+}
+.glossary dd {
+	margin-top: 0; 
+	margin-left: 0;
+}
+
+/* NARRATIVE IMAGE CAPTIONS 
+======================================== */
+.one-col-caption {
+	float: right;
+	width: 185px;
+	text-align: left;
+	margin: 0 0 10px 0;
+	padding: 0 0 0 10px;
+}
+.two-col-caption {
+	float: right;
+	width: 380px;
+	text-align: left;
+	margin: 0 0 10px 0;
+	padding: 0 0 0 10px;
+}
+.three-col-caption {
+	float: right;
+	width: 585px;
+	text-align: left;
+	margin: 0 0 10px 0;
+	padding: 0 0 0 10px;
+}
+
+/* FOOTER 
+======================================== */
+#footer {
+	border-top: 1px solid #000;
+	margin: 10px 0 10px 20px;
+	padding: 0 0 20px 0;
+	z-index: 100;
+	background-color: #FFF;
+}
+#wordmark img.print
+{
+	display: none;
+}
+body.attract #footer {
+	width: 730px;
+}
+body.app #footer, body.app-wide #footer {
+	margin: 10px 20px 10px 20px;
+}
+body.popup #footer {
+	display: none;
+}
+#wordmark {
+	width: 100%;
+	height: 25px;
+	padding-top: 0px;
+	text-align: center;
+	font-style: italic;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+#disclosures {
+	font-size: 80%;
+	margin-top: 0.25em;
+	text-align: center;
+	height: 20px;
+	width: auto;
+}
+body.attract #disclosures {
+	width: auto;
+}
+body.attract #disclosures p {
+	margin-bottom: 0;
+}
+#disclosures p {
+	margin-left: 10px;
+}
+#disclaimer {
+	margin-top: 10px;
+	padding-top: 4px;
+	clear: both;
+	text-align: center;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+/* Homepage/Login Page */
+#content .login-panel {
+	border: 1px solid #CCCCCC;
+	background-color: #F2E9D3;
+	margin-bottom: 0px;
+	position: absolute;
+	left: 760px;
+	width: 183px;
+  min-height: 471px;
+  height: auto !important;
+  height: 471px;
+}
+#content  .login-panel h2 {
+	background-color: #AF1732;
+	color:#FFFFFF;
+  display:block;
+  padding:0.25em 0.25em 0.25em 0.5em;
+	border: none;
+}
+#content  .login-panel form {
+	padding: 0.5em;
+	margin: 0px;
+}
+
+#content .login-panel form .register-now {
+	text-align: right;
+}
+#content .login-panel form .register-now a {
+	text-decoration: none;
+  color: #023D69;
+	font-weight: bold;
+}
+#content .login-panel form .register-now a img {
+	padding: 0px;
+	margin: 0px;
+	float: none;
+}
+											
+#content .login-panel form input {
+	display: block;
+}
+
+#content .login-panel form p {
+	margin-bottom: 5px;
+}
+
+#content .login-panel form p label {
+	color: #023D69;
+	font-weight: bold;
+}
+
+#content .login-panel form input.flat {
+	border: 1px solid #888888;
+	font-size: 100%;
+	width: 167px;
+}
+
+#content  .login-panel form .b-promo {
+	margin-right: 1px;
+}
+
+#content .login-panel ul {
+  list-style-type: none;
+  background-color: #F2E9D3;
+	font-weight: normal;
+  font-size:0.9em;
+	color: #000000;
+	padding: 0px;
+	margin: 0px;
+	width: auto;
+}
+#content .login-panel ul li {
+  background-color: #F2E9D3;
+	border-top: 1px dotted #888888;
+	border-bottom: 0px;
+	font-weight: normal;
+	color: #000000;
+	padding: 0.5em;
+	margin: 0px;
+}
+#content .login-panel ul li a {
+  background-color: #F2E9D3;
+	font-weight: normal;
+	color: #023D69;
+	text-decoration: underline;
+	padding: 0px;
+	margin: 0px;
+	display:inline;
+}
+#content ul.login-help-links li{
+	border: none;
+	padding: 0px 0px 4px 0px;
+	display: block;
+}
+#content ul.login-help-links li.last {
+	padding: 0px;
+}
+
+#content .login-panel ul li p {
+	padding: 0px;
+	margin: 0px;
+}
+
+#content .newsticker {
+  border: 1px solid #CCCCCC;
+	background-color: #E8E8E8;
+	color: #023D69;
+	height: 26px;
+	width:573px;
+}
+
+#content .newsticker .area{
+  padding-top: 6px;
+}
+
+#content .newsticker h3 {
+	float: left;
+	padding-left: 12px;
+	padding-right: 18px;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 90%;
+	color: #023D69;
+	border: none;
+}
+
+#content .newsticker .newsticker-controls {
+	float: left;
+	height: 19px;
+	margin-top: -2px;
+	padding-right: 12px;
+	width: 40px;
+}
+
+#content .newsticker .newsticker-controls a {
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	width: 100%;
+}
+#content .newsticker .newsitem-previous {
+	float: left;
+	height: 19px;
+	width: 19px;
+}
+#content .newsticker .newsitem-previous a {
+	background: transparent url(../images/accents/tickerControls.png) no-repeat;
+}
+#content .newsticker .newsitem-previous a:hover {
+	background: transparent url(../images/accents/tickerControls.png) no-repeat scroll 0px -19px;
+}
+#content .newsticker .newsitem-next {
+	border-left: 1px solid #CCCCCC;
+	float: left;
+	height: 19px;
+	width: 19px;
+}
+#content .newsticker .newsitem-next a {
+	background: transparent url(../images/accents/tickerControls.png) no-repeat scroll -19px 0px;
+}
+#content .newsticker .newsitem-next a:hover {
+	background: transparent url(../images/accents/tickerControls.png) no-repeat scroll -19px -19px;
+}
+#content .newsticker ul {
+	float: left;
+	list-style-type: none;
+	position: relative;
+	width: 350px;
+	padding: 0px;
+	margin: -1px 0px 0px 0px;
+}
+
+#content .newsticker ul li {
+	left:0;
+	list-style-position:inside;
+	position:absolute;
+	top:0;
+	padding: 0px;
+	margin: 0px;
+}
+#content .newsticker ul li a {
+  color: #023D69;
+	font-size: 90%;
+  text-decoration:none;
+}
+#content .newsticker ul li a:hover {
+  color: #023D69;
+  text-decoration: underline;
+}
+
+.promo-one-large {
+	height: 295px;
+	position: relative;
+	vertical-align: middle;
+}
+
+ul#promo-container {
+	float: left;
+	list-style-type: none;
+	position: relative;
+	width: 575px;
+	height: 295px;
+	padding: 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+ul#promo-container li {
+	left:0;
+	list-style-position:inside;
+	position:absolute;
+	top:0;
+	padding: 0px;
+	margin: 0px;
+}
+ul#promo-container img {
+	margin: 0px;
+	padding: 0px;
+}
+
+#promo-controls {
+  background: none;
+	bottom: 5px;
+	position: absolute;
+	right: 5px;
+	height: 26px;
+}
+#promo-controls .promo-left-cap {
+  background: transparent url(../images/accents/toggle_capLeft.png) no-repeat scroll 0px 0px;
+  float: left;
+	height: 26px;
+	width: 5px;
+}
+#promo-controls .promo-right-cap {
+  background: transparent url(../images/accents/toggle_capRight.png) no-repeat scroll 0px 0px;
+  float: left;
+	height: 26px;
+	width: 5px;
+}
+#promo-controls .promo-previous {
+	float: left;
+	height: 16px;
+	width: 16px;
+	padding-right: 2px;
+}
+#promo-controls .promo-previous a {
+	display:block;
+	height:100%;
+	text-decoration:none;
+	width:100%;
+  margin: 5px 0px 0px 0px;
+	background: transparent url(../images/accents/toggle_arrows.png) no-repeat scroll -2px 0px;
+}
+#promo-controls .promo-previous a:hover {
+	background: transparent url(../images/accents/toggle_arrows.png) no-repeat scroll -2px -19px;
+}
+#promo-controls .promo-next {
+	float: left;
+	height: 16px;
+	width: 16px;
+	padding-left: 2px;
+}
+#promo-controls .promo-next a {
+	display:block;
+	height:100%;
+	text-decoration:none;
+	width:100%;
+	margin: 5px 0px 0px 0px;
+	background: transparent url(../images/accents/toggle_arrows.png) no-repeat scroll -19px 0px;
+}
+#promo-controls .promo-next a:hover {
+	background: transparent url(../images/accents/toggle_arrows.png) no-repeat scroll -19px -19px;
+}
+#promo-controls .promo-middle {
+  float: left;
+  background: transparent url(../images/accents/toggle_middle.png) repeat-x scroll 0px 0px;
+	height: 26px;
+	margin: 0px;
+	padding: 0px;
+}
+#promo-controls ul {
+  float: left;
+	margin: 0px;
+	padding: 0px;
+}
+#promo-controls ul li {
+	list-style-image:none;
+	list-style-position:outside;
+	list-style-type:none;
+  float: left;
+	padding: 0px;
+	margin: 5px 0px 0px 0px;
+	height: 26px;
+}
+#content #promo-controls ul li a {
+  padding: 1px 5px 1px 5px;
+	color: #333333;
+	font-weight: bold;
+	text-decoration: none;
+}
+#content #promo-controls ul li a.active {
+  background-color: #FFFFFF;
+	color: #333333;
+}
+#content #promo-controls ul li a:hover {
+  background-color: #FFFFFF;
+	color: #333333;
+}
+.oaOverlay { 
+    background-color: #000000;
+    filter:alpha(opacity=70);
+    opacity:.7;
+	position: fixed; 
+	top: 0px; 
+	left: 0px; 
+	z-index: 105; 
+	width: 2000px; 
+	height: 2000px;  
+}
+.oaDialog {
+	z-index: 110;
+	width: 480px; 
+	padding:10px;
+	position: relative;
+    padding: 5px 10px 10px 10px;
+    background: #FFFFFF 0 bottom no-repeat;
+    /* rounded corners */
+    -moz-border-radius: 5px;
+    -webkit-border-radius:5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+/* removing rounded-corner image leaving shells for retro fit */
+.oaDialogTopLeft {
+}
+.oaDialogTopRight {
+}
+.oaDialogBottomLeft {
+}
+.oaDialogBottomRight {
+}
+.oaDialogTopRightLink {
+	top: 1px;
+	text-decoration:none; 
+	font-weight:bold;
+	float: right;
+	width: auto;
+	padding: 0;
+	position: relative;
+}
+.app #content .oaDialogTopRightLink {	
+	color: #000;
+}
+.oaDialogTopRightLink:hover {
+	padding: 0 2px;
+	background-color: #5A91C4;
+        -moz-border-radius: 5px;
+        -webkit-border-radius:5px;
+        -khtml-border-radius: 5px;
+    	border-radius: 5px;
+}
+.app #content .oaDialogTopRightLink:hover {
+	color: #FFF;
+}
+
+.cursorHelp {
+	cursor: help;
+}
+
+/* 
+====================================================
+Account access login box
+==================================================== */
+
+#sidenav  div.login  {
+	padding-bottom: 25px;
+	margin-bottom: 10px;
+}
+/* 
+====================================================
+Sidenav flyout select box
+==================================================== */
+
+#sidenav  div.oaSelectTag  {
+
+	
+	position: relative;	
+	width: 90%;
+	color: black;
+	background: white url(../images/sidenav/dropdownArrow.png) no-repeat right center;
+	padding: 0;
+	margin: 0 auto;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-bottom: .5px solid gray;
+}
+
+#sidenav div.oaSelectTag a {
+
+	padding: 0 .5em;
+	color: black;
+	display:block;
+	white-space:nowrap;
+}
+
+#sidenav div.oaSelectOptions ul li {
+	font-weight: normal; 	
+}
+#sidenav div.oaSelectOptions ul li.submenu {
+	font-weight: bold; 	
+}
+
+#sidenav div.oaSelectOptions  {
+
+	border: 1px solid black;
+	background-color: white;
+	width: auto;
+	position:absolute;
+	left:0;
+	visibility: hidden;
+	display:none;
+	z-index: 100;
+	margin: 0;
+	padding: .5em .5em;
+}
+
+#sidenav div.oaSelectTag:hover .oaSelectOptions  {
+	visibility: visible;
+	display:block;
+}
+
+#sidenav  div.oaSelectOptions a,
+#sidenav  div.oaSelectOptions ul,
+#sidenav  div.oaSelectOptions li {
+	margin: 0;
+	padding: 0;
+	color: black;
+	background-color: white;
+	border:0;
+	width:auto;
+}
+#sidenav  div.oaSelectOptions li li {
+
+	padding-left: 1em;
+}
+#sidenav  div.oaSelectOptions li.submenu > a:hover,
+#sidenav  div.oaSelectOptions li.submenu:hover
+{
+	color: black;
+	background-color:white;
+
+}
+
+#sidenav  div.oaSelectOptions li a:hover,
+#sidenav  div.oaSelectOptions li:hover
+{
+	color: white;
+	background-color: #023D69;
+}
+/*
+=======================================================================
+IE has issue with overlap if multiple oaSelectTag/oaSelectOptions
+use the oaZIndex classes below to denote order: first, second, third, etc 
+======================================================================= */
+
+#sidenav  div.oaSelectTag.oaZIndexFirst  {
+	z-index: 10;
+}
+#sidenav  div.oaSelectTag.oaZIndexSecond  {
+	z-index: 9;
+}
+#sidenav  div.oaSelectTag.aZIndexThird  {
+	z-index: 8;
+}
+div.oaExpandable
+{
+	 margin-bottom: 1em;
+
+}
+.whiteSpaceNoWrap {
+
+	white-space:nowrap;
+}
